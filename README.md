@@ -21,7 +21,7 @@ This project was built as a lightweight personal knowledge base and hero analysi
 
 You can access the live version here:
 
-👉 https://VaroLuq.github.io/Mobile-Legends-Bang-Bang-Explorer-Dashboard/
+👉 https://varoluq.github.io/Mobile-Legends-Bang-Bang-Explorer-Dashboard/
 
 ---
 
