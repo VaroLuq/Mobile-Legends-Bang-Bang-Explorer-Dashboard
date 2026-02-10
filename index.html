@@ -2,18 +2,51 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>MLBB Hero Finder</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Mobile Legends Bang Bang Hero Database - Search and filter heroes by role, attributes, and damage type">
+<title>MLBB Hero Finder - Mobile Legends Database</title>
+
+<!-- Preload critical fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+/* CSS Variables for better maintainability */
+:root {
+  --color-primary: #00ffff;
+  --color-bg-dark: #050b1a;
+  --color-glass: rgba(0,0,0,0.35);
+  --transition-fast: 0.15s;
+  --transition-normal: 0.25s;
+  --transition-slow: 0.4s;
+  --border-radius-sm: 10px;
+  --border-radius-md: 16px;
+  --border-radius-lg: 22px;
+  --border-radius-full: 999px;
+}
 
-/* Background */
+/* Performance optimizations */
+* {
+  box-sizing: border-box;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Background - Use will-change sparingly */
 body {
-  font-family: 'Rajdhani', 'Orbitron', 'Exo 2', 'Share Tech Mono', 'Electrolize', Inter, system-ui, sans-serif;
+  font-family: 'Rajdhani', system-ui, sans-serif;
   min-height: 100vh;
-  padding: 40px;
+  padding: 20px;
+  margin: 0;
   color: white;
-
   background: linear-gradient(
     120deg,
     #050b1a,
@@ -26,42 +59,41 @@ body {
   animation: cyberGradient 20s ease infinite;
 }
 
+/* Scanline effect - optimized */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   background: repeating-linear-gradient(
     to bottom,
-    rgba(255,255,255,0.03) 0px,
-    rgba(255,255,255,0.03) 1px,
+    rgba(255,255,255,0.02) 0px,
+    rgba(255,255,255,0.02) 1px,
     transparent 1px,
     transparent 3px
   );
   pointer-events: none;
   z-index: 9999;
+  opacity: 0.5;
 }
-
 
 @keyframes cyberGradient {
-  0% { background-position: 0% 50%; }
+  0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
 }
-
 
 /* Glass Container */
 .glass {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
   padding: 25px 30px;
-  border-radius: 22px;
-  background: rgba(0,0,0,0.35);
-  backdrop-filter: blur(22px);
-  -webkit-backdrop-filter: blur(22px);
+  border-radius: var(--border-radius-lg);
+  background: var(--color-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(0,255,255,0.2);
   box-shadow: 
-    0 0 20px rgba(0,255,255,0.15),
-    0 0 60px rgba(0,255,255,0.05);
+    0 0 20px rgba(0,255,255,0.1),
+    0 0 40px rgba(0,255,255,0.05);
 }
 
 .header {
@@ -69,427 +101,312 @@ body::before {
   margin-bottom: 25px;
 }
 
-/* Title Glow */
+/* Title */
 h1 {
   font-family: 'Orbitron', sans-serif;
   font-weight: 700;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
   letter-spacing: 2px;
-  color: #00ffff;
-  text-shadow:
-    0 0 10px rgba(0,255,255,0.6),
-    0 0 30px rgba(0,255,255,0.2);
+  margin: 0 0 15px 0;
+  color: var(--color-primary);
+  text-shadow: 0 0 10px rgba(0,255,255,0.5);
 }
 
-/* Cyberpunk Search Bar */
+/* Search Bar */
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
 #search {
-  margin-top: 12px;
-  width: 420px;
-  max-width: 100%;
-  padding: 14px 18px;
-  border-radius: 999px;
+  width: 100%;
+  max-width: 500px;
+  padding: 12px 18px;
+  border-radius: var(--border-radius-full);
   border: 1px solid rgba(0,255,255,0.4);
-  background: rgba(0,0,0,0.45);
-  backdrop-filter: blur(10px);
-  color: #00ffff;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(8px);
+  color: var(--color-primary);
   font-size: 15px;
+  font-family: 'Rajdhani', sans-serif;
   outline: none;
-  transition: 0.3s ease;
-  caret-color: #00ffff;
-  box-shadow:
-    0 0 10px rgba(0,255,255,0.15),
-    inset 0 0 8px rgba(0,255,255,0.2);
+  transition: all var(--transition-normal) ease;
+  caret-color: var(--color-primary);
 }
 
-/* Placeholder */
 #search::placeholder {
   color: rgba(0,255,255,0.4);
 }
 
-/* Focus Neon Pulse */
 #search:focus {
-  border-color: #00ffff;
-  box-shadow:
-    0 0 12px #00ffff,
-    0 0 30px rgba(0,255,255,0.5),
-    inset 0 0 12px rgba(0,255,255,0.4);
-  animation: searchPulse 2s infinite ease-in-out;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 15px rgba(0,255,255,0.4);
 }
 
-.search-wrapper {
-  display: flex;
-  justify-content: center;
-  position: relative;
+/* Stats bar */
+.stats {
+  text-align: center;
+  font-size: 13px;
+  opacity: 0.7;
+  margin-top: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.search-wrapper::before {
-  content: "";
-  position: absolute;
-  left: 14px;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: 0.6;
-}
-
-#search {
-  padding-left: 42px;
-}
-
-
-/* Focus glow animation */
-@keyframes searchPulse {
-  0%,100% { box-shadow: 0 0 12px #00ffff; }
-  50% { box-shadow: 0 0 28px #00ffff; }
-}
-
-
-/* Search Bar */
-input[type=text] {
-  width: 100%;
-  padding: 14px;
-  border-radius: 12px;
-  border: none;
-  outline: none;
-  font-size: 16px;
-  background: rgba(0,0,0,0.3);
-  color: white;
-}
-
-/* Checkbox Groups */
+/* Filter Groups */
 .group {
-  margin-top: 18px;
+  margin-top: 20px;
 }
 
 .group-title {
   font-size: 14px;
-  opacity: 0.7;
-  margin-bottom: 6px;
+  font-weight: 700;
+  opacity: 0.8;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-primary);
 }
 
 .filters {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 
+/* Checkbox Labels - Optimized animations */
 label {
   background: rgba(0,0,0,0.4);
   padding: 6px 14px;
-  border-radius: 999px;
+  border-radius: var(--border-radius-full);
   cursor: pointer;
-  font-size: 13px;
-  font-family: 'Rajdhani', sans-serif;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  transition: 
-    background 0.25s ease,
-    box-shadow 0.25s ease,
-    transform 0.15s ease,
-    color 0.25s ease;
+  transition: all var(--transition-fast) ease;
   border: 1px solid rgba(0,255,255,0.2);
   display: inline-flex;
   align-items: center;
-  gap: 6px;
   color: #9ca3af;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(6px);
+  user-select: none;
 }
 
-/* Hover glow */
 label:hover {
   color: white;
-  transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 0 8px rgba(0,255,255,0.4);
+  transform: translateY(-1px);
+  box-shadow: 0 0 8px rgba(0,255,255,0.3);
 }
 
-/* Press */
 label:active {
-  transform: scale(0.95);
+  transform: scale(0.97);
 }
 
-/* Checked Neon Cyberpunk */
 label:has(input:checked) {
-  color: #00ffff;
-  background: rgba(0,255,255,0.12);
-  border-color: #00ffff;
-  box-shadow:
-    0 0 8px #00ffff,
-    0 0 16px rgba(0,255,255,0.6),
-    inset 0 0 8px rgba(0,255,255,0.4);
-  animation: neonPop 0.25s ease-out, neonPulse 2s infinite ease-in-out;
+  color: var(--color-primary);
+  background: rgba(0,255,255,0.15);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 10px rgba(0,255,255,0.5);
 }
 
-/* Checkbox accent */
 input[type="checkbox"] {
-  display: none; /* Hide the checkbox box completely */
+  display: none;
 }
 
-/* Pop animation */
-@keyframes neonPop {
-  0% { transform: scale(0.85); }
-  60% { transform: scale(1.12); }
-  100% { transform: scale(1); }
-}
-
-/* Cyberpunk glow pulse */
-@keyframes neonPulse {
-  0%,100% { box-shadow: 0 0 8px #00ffff; }
-  50% { box-shadow: 0 0 18px #00ffff; }
-}
-
-
-
-
-/* Results */
+/* Results Grid - Optimized */
 .results {
-  margin-top: 20px;
+  margin-top: 25px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  min-height: 200px;
 }
 
-/* Hero card structure */
+/* Loading State */
+.loading {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 18px;
+  color: var(--color-primary);
+  opacity: 0.7;
+}
+
+/* No Results */
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+/* Hero Cards - Performance optimized */
 .hero-card {
-  background: rgba(0,0,0,0.55);
-  padding: 14px 16px;
-  border-radius: 16px;
+  background: rgba(0,0,0,0.5);
+  padding: 16px;
+  border-radius: var(--border-radius-md);
   border: 1px solid rgba(0,255,255,0.15);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(8px);
   display: flex;
   flex-direction: column;
   gap: 10px;
-  animation: heroFade 0.35s ease forwards;
-  transform: scale(0.96);
-  opacity: 0;
-  transition: 0.2s ease;
+  transition: transform var(--transition-fast) ease, box-shadow var(--transition-fast) ease;
+  animation: fadeIn var(--transition-normal) ease forwards;
+  contain: layout style paint;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 16px rgba(0,255,255,0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 20px rgba(0,255,255,0.3);
 }
 
-/* Role-based card colors */
+/* Role-based colors - Simplified */
 .hero-card.role-mage {
   border-color: rgba(59, 130, 246, 0.5);
-  background: rgba(59, 130, 246, 0.15);
-  box-shadow: 0 0 12px rgba(59, 130, 246, 0.3);
-}
-
-.hero-card.role-mage:hover {
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+  background: rgba(59, 130, 246, 0.12);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.2);
 }
 
 .hero-card.role-marksman {
   border-color: rgba(245, 158, 11, 0.5);
-  background: rgba(245, 158, 11, 0.15);
-  box-shadow: 0 0 12px rgba(245, 158, 11, 0.3);
-}
-
-.hero-card.role-marksman:hover {
-  box-shadow: 0 0 20px rgba(245, 158, 11, 0.6);
+  background: rgba(245, 158, 11, 0.12);
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.2);
 }
 
 .hero-card.role-fighter {
   border-color: rgba(239, 68, 68, 0.5);
-  background: rgba(239, 68, 68, 0.15);
-  box-shadow: 0 0 12px rgba(239, 68, 68, 0.3);
-}
-
-.hero-card.role-fighter:hover {
-  box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+  background: rgba(239, 68, 68, 0.12);
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.2);
 }
 
 .hero-card.role-assassin {
   border-color: rgba(168, 85, 247, 0.5);
-  background: rgba(168, 85, 247, 0.15);
-  box-shadow: 0 0 12px rgba(168, 85, 247, 0.3);
-}
-
-.hero-card.role-assassin:hover {
-  box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+  background: rgba(168, 85, 247, 0.12);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.2);
 }
 
 .hero-card.role-tank {
   border-color: rgba(180, 83, 9, 0.5);
-  background: rgba(180, 83, 9, 0.15);
-  box-shadow: 0 0 12px rgba(180, 83, 9, 0.3);
-}
-
-.hero-card.role-tank:hover {
-  box-shadow: 0 0 20px rgba(180, 83, 9, 0.6);
+  background: rgba(180, 83, 9, 0.12);
+  box-shadow: 0 0 10px rgba(180, 83, 9, 0.2);
 }
 
 .hero-card.role-support {
   border-color: rgba(20, 184, 166, 0.5);
-  background: rgba(20, 184, 166, 0.15);
-  box-shadow: 0 0 12px rgba(20, 184, 166, 0.3);
+  background: rgba(20, 184, 166, 0.12);
+  box-shadow: 0 0 10px rgba(20, 184, 166, 0.2);
 }
 
-.hero-card.role-support:hover {
-  box-shadow: 0 0 20px rgba(20, 184, 166, 0.6);
-}
-
-/* Multi-role gradient backgrounds and glows */
+/* Multi-role gradient - Simplified */
 .hero-card.multi-role {
   background: linear-gradient(135deg, var(--role1-bg) 0%, var(--role2-bg) 100%);
-  border: 1px solid transparent;
-  background-clip: padding-box;
-  position: relative;
-  box-shadow: 
-    0 0 12px var(--role1-glow),
-    0 0 12px var(--role2-glow);
-}
-
-.hero-card.multi-role::before {
-  content: '';
-  position: absolute;
-  inset: -1px;
-  border-radius: 16px;
-  padding: 1px;
-  background: linear-gradient(135deg, var(--role1-border), var(--role2-border));
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-  z-index: -1;
-}
-
-.hero-card.multi-role:hover {
-  box-shadow: 
-    0 0 20px var(--role1-glow),
-    0 0 20px var(--role2-glow);
-}
-
-/* Header */
-.hero-header {
-  border-bottom: 1px solid rgba(0,255,255,0.2);
-  padding-bottom: 6px;
+  border: 1px solid;
+  border-image: linear-gradient(135deg, var(--role1-border), var(--role2-border)) 1;
 }
 
 .hero-name {
   font-size: 18px;
-  font-weight: 600;
-  color: #00ffff;
-  text-shadow: 0 0 6px rgba(0,255,255,0.6);
+  font-weight: 700;
+  color: var(--color-primary);
+  text-shadow: 0 0 5px rgba(0,255,255,0.4);
+  margin-bottom: 4px;
 }
 
-/* Sections */
-.hero-section {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.section-title {
-  font-size: 11px;
-  opacity: 0.6;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-/* Tag groups */
-.tag-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-/* Base tag style */
-.tag {
-  padding: 3px 8px;
-  border-radius: 999px;
-  font-size: 11px;
-  border: 1px solid rgba(255,255,255,0.2);
-  backdrop-filter: blur(6px);
-  background: rgba(255,255,255,0.08);
-}
-
-/* Role tags */
-.tag.role {
-  color: #00ffff;
-  border-color: rgba(0,255,255,0.4);
-  box-shadow: 0 0 6px rgba(0,255,255,0.2);
-}
-
-/* Attribute tags */
-.tag.attr {
-  color: #ff00ff;
-  border-color: rgba(255,0,255,0.4);
-  box-shadow: 0 0 6px rgba(255,0,255,0.2);
-}
-
-/* Damage tags */
-.tag.dmg {
-  color: #ffcc00;
-  border-color: rgba(255,204,0,0.4);
-  box-shadow: 0 0 6px rgba(255,204,0,0.2);
-}
-
-.hero-meta {
-  margin-top: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
+/* Collapsible sections */
 .meta-section {
-  border: 1px solid rgba(0,255,255,0.15);
-  border-radius: 10px;
-  padding: 8px 12px;
-  background: rgba(0,0,0,0.3);
-  backdrop-filter: blur(10px);
-  transition: 0.3s ease;
+  border: 1px solid rgba(0,255,255,0.1);
+  border-radius: var(--border-radius-sm);
+  padding: 8px 10px;
+  background: rgba(0,0,0,0.25);
+  cursor: pointer;
+  transition: background var(--transition-fast) ease;
+}
+
+.meta-section:hover {
+  background: rgba(0,0,0,0.35);
 }
 
 .meta-header {
-  font-weight: bold;
-  color: cyan;
-  cursor: pointer;
+  font-weight: 700;
+  font-size: 13px;
+  color: rgba(0,255,255,0.9);
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.meta-header:hover {
-  text-shadow: 0 0 8px cyan;
+  user-select: none;
 }
 
 .meta-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease, opacity 0.3s ease;
-  opacity: 0;
+  transition: max-height var(--transition-slow) ease;
+  margin-top: 0;
 }
 
 .meta-content.open {
-  max-height: 200px;
-  opacity: 1;
+  max-height: 300px;
+  margin-top: 8px;
 }
 
 .meta-chip {
   display: inline-block;
-  margin: 4px;
-  padding: 4px 10px;
-  border-radius: 999px;
-  font-size: 12px;
-  background: rgba(0,255,255,0.15);
-  border: 1px solid cyan;
-  color: cyan;
-  box-shadow: 0 0 8px cyan;
+  margin: 2px;
+  padding: 3px 8px;
+  border-radius: var(--border-radius-full);
+  font-size: 11px;
+  background: rgba(0,255,255,0.1);
+  border: 1px solid rgba(0,255,255,0.3);
+  color: rgba(0,255,255,0.9);
 }
 
-
-
-/* Fade + scale in */
-@keyframes heroFade {
-  from {
-    opacity: 0;
-    transform: translateY(10px) scale(0.92);
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
+  
+  .glass {
+    padding: 20px 15px;
   }
+  
+  .results {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+  }
+  
+  .group {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .results {
+    grid-template-columns: 1fr;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Utility classes */
+.hidden {
+  display: none;
 }
 
 </style>
@@ -499,13 +416,12 @@ input[type="checkbox"] {
 
 <div class="glass">
   <div class="header">
-  <h1>Mobile Legends Hero Database</h1>
-  <div class="search-wrapper">
-  <input id="search" placeholder="Search hero name...">
-</div>
-
-</div>
-
+    <h1>Mobile Legends Hero Database</h1>
+    <div class="search-wrapper">
+      <input id="search" placeholder="Search hero name..." autocomplete="off" spellcheck="false">
+    </div>
+    <div class="stats" id="stats">Loading heroes...</div>
+  </div>
 
   <div class="group">
     <div class="group-title">Roles</div>
@@ -522,140 +438,183 @@ input[type="checkbox"] {
     <div id="damage" class="filters"></div>
   </div>
 
-  <div class="results" id="results"></div>
+  <div class="results" id="results">
+    <div class="loading">Loading heroes...</div>
+  </div>
 </div>
 
 <script>
-// =====================
-// 🔥 PASTE YOUR JSON HERE
-// =====================
-let heroes = [];
+'use strict';
 
-// console.log(heroes);
+// =====================
+// Performance Optimizations
+// =====================
 
-async function loadHeroes() {
-  const res = await fetch("heroes.json");
-  heroes = await res.json();
-  console.log("Loaded", heroes.length, "heroes");
-  console.log(heroes)
-  buildCheckboxes("roles", getUnique("Roles"));
-  buildCheckboxes("attributes", getUnique("Attributes"));
-  buildCheckboxes("damage", getUnique("Damage Type"));
-  document.querySelectorAll("input").forEach(i =>
-  i.addEventListener("input", update)
-  );
-  update();
+// Debounce function for search input
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
 }
 
-loadHeroes();
+// Role color constants (cached)
+const ROLE_COLORS = {
+  'Mage': {
+    bg: 'rgba(59, 130, 246, 0.15)',
+    border: 'rgba(59, 130, 246, 0.5)',
+    glow: 'rgba(59, 130, 246, 0.3)'
+  },
+  'Marksman': {
+    bg: 'rgba(245, 158, 11, 0.15)',
+    border: 'rgba(245, 158, 11, 0.5)',
+    glow: 'rgba(245, 158, 11, 0.3)'
+  },
+  'Fighter': {
+    bg: 'rgba(239, 68, 68, 0.15)',
+    border: 'rgba(239, 68, 68, 0.5)',
+    glow: 'rgba(239, 68, 68, 0.3)'
+  },
+  'Assassin': {
+    bg: 'rgba(168, 85, 247, 0.15)',
+    border: 'rgba(168, 85, 247, 0.5)',
+    glow: 'rgba(168, 85, 247, 0.3)'
+  },
+  'Tank': {
+    bg: 'rgba(180, 83, 9, 0.15)',
+    border: 'rgba(180, 83, 9, 0.5)',
+    glow: 'rgba(180, 83, 9, 0.3)'
+  },
+  'Support': {
+    bg: 'rgba(20, 184, 166, 0.15)',
+    border: 'rgba(20, 184, 166, 0.5)',
+    glow: 'rgba(20, 184, 166, 0.3)'
+  }
+};
 
+const MAIN_ROLES = ['Mage', 'Marksman', 'Fighter', 'Assassin', 'Tank', 'Support'];
 
 // =====================
-// Auto Extract Filters
+// Data & State
+// =====================
+let heroes = [];
+let filteredHeroes = [];
+
+// =====================
+// Data Loading
+// =====================
+async function loadHeroes() {
+  try {
+    const response = await fetch("heroes.json");
+    if (!response.ok) throw new Error('Failed to load heroes');
+    
+    heroes = await response.json();
+    
+    // Pre-process hero data for faster filtering
+    heroes.forEach(h => {
+      h._roles = h.Roles?.split(",").map(x => x.trim()) || [];
+      h._attrs = h.Attributes?.split(",").map(x => x.trim()) || [];
+      h._dmg = h["Damage Type"]?.trim() || "";
+      h._nameLower = h["Hero Name"]?.toLowerCase() || "";
+    });
+    
+    console.log(`Loaded ${heroes.length} heroes`);
+    
+    // Build UI
+    buildCheckboxes("roles", getUnique("Roles"));
+    buildCheckboxes("attributes", getUnique("Attributes"));
+    buildCheckboxes("damage", getUnique("Damage Type"));
+    
+    // Attach event listeners
+    const searchInput = document.getElementById("search");
+    searchInput.addEventListener("input", debounce(update, 150));
+    
+    document.querySelectorAll(".filters input").forEach(input => {
+      input.addEventListener("change", update);
+    });
+    
+    // Initial render
+    update();
+    
+  } catch (error) {
+    console.error('Error loading heroes:', error);
+    document.getElementById("results").innerHTML = 
+      '<div class="no-results">Failed to load heroes. Please refresh the page.</div>';
+  }
+}
+
+// =====================
+// Filter Extraction
 // =====================
 function getUnique(field) {
   const set = new Set();
   heroes.forEach(h => {
     if (!h[field]) return;
-    h[field].split(",").map(x => x.trim()).forEach(x => set.add(x));
+    h[field].split(",").forEach(x => set.add(x.trim()));
   });
   return [...set].sort();
 }
 
 function buildCheckboxes(id, items) {
-  const div = document.getElementById(id);
-  items.forEach(x => {
-    div.innerHTML += `<label><input type="checkbox" value="${x}"> ${x}</label>`;
+  const container = document.getElementById(id);
+  const fragment = document.createDocumentFragment();
+  
+  items.forEach(item => {
+    const label = document.createElement('label');
+    label.innerHTML = `<input type="checkbox" value="${item}"> ${item}`;
+    fragment.appendChild(label);
   });
+  
+  container.appendChild(fragment);
 }
 
+// =====================
+// Card Creation (Optimized)
+// =====================
 function createHeroCard(hero) {
   const card = document.createElement("div");
   card.className = "hero-card";
-
-  const roles = hero.Roles ? hero.Roles.split(",").map(r => r.trim()) : [];
-  const attributes = hero.Attributes ? hero.Attributes.split(",").map(a => a.trim()) : [];
-  const damageType = hero["Damage Type"] ? [hero["Damage Type"]] : [];
-
-  // Role color definitions
-  const roleColors = {
-    'Mage': {
-      bg: 'rgba(59, 130, 246, 0.15)',
-      border: 'rgba(59, 130, 246, 0.5)',
-      glow: 'rgba(59, 130, 246, 0.3)'
-    },
-    'Marksman': {
-      bg: 'rgba(245, 158, 11, 0.15)',
-      border: 'rgba(245, 158, 11, 0.5)',
-      glow: 'rgba(245, 158, 11, 0.3)'
-    },
-    'Fighter': {
-      bg: 'rgba(239, 68, 68, 0.15)',
-      border: 'rgba(239, 68, 68, 0.5)',
-      glow: 'rgba(239, 68, 68, 0.3)'
-    },
-    'Assassin': {
-      bg: 'rgba(168, 85, 247, 0.15)',
-      border: 'rgba(168, 85, 247, 0.5)',
-      glow: 'rgba(168, 85, 247, 0.3)'
-    },
-    'Tank': {
-      bg: 'rgba(180, 83, 9, 0.15)',
-      border: 'rgba(180, 83, 9, 0.5)',
-      glow: 'rgba(180, 83, 9, 0.3)'
-    },
-    'Support': {
-      bg: 'rgba(20, 184, 166, 0.15)',
-      border: 'rgba(20, 184, 166, 0.5)',
-      glow: 'rgba(20, 184, 166, 0.3)'
-    }
-  };
-
-  // Get all main roles (Mage, Marksman, Fighter, Assassin, Tank, Support)
-  const mainRoles = ['Mage', 'Marksman', 'Fighter', 'Assassin', 'Tank', 'Support'];
-  const heroMainRoles = roles.filter(roles => mainRoles.includes(roles));
-
+  
+  // Apply role-based styling
+  const heroMainRoles = hero._roles.filter(role => MAIN_ROLES.includes(role));
+  
   if (heroMainRoles.length >= 2) {
-    // Multi-role hero - set CSS variables for gradient
     const role1 = heroMainRoles[0];
     const role2 = heroMainRoles[1];
-    
     card.classList.add('multi-role');
-    card.style.setProperty('--role1-bg', roleColors[role1].bg);
-    card.style.setProperty('--role1-border', roleColors[role1].border);
-    card.style.setProperty('--role1-glow', roleColors[role1].glow);
-    card.style.setProperty('--role2-bg', roleColors[role2].bg);
-    card.style.setProperty('--role2-border', roleColors[role2].border);
-    card.style.setProperty('--role2-glow', roleColors[role2].glow);
+    card.style.setProperty('--role1-bg', ROLE_COLORS[role1].bg);
+    card.style.setProperty('--role1-border', ROLE_COLORS[role1].border);
+    card.style.setProperty('--role2-bg', ROLE_COLORS[role2].bg);
+    card.style.setProperty('--role2-border', ROLE_COLORS[role2].border);
   } else if (heroMainRoles.length === 1) {
-    // Single role - use solid color
-    const roleClass = heroMainRoles[0].toLowerCase();
-    card.classList.add(`role-${roleClass}`);
+    card.classList.add(`role-${heroMainRoles[0].toLowerCase()}`);
   }
-
+  
   card.innerHTML = `
     <div class="hero-name">${hero["Hero Name"]}</div>
-
     <div class="hero-meta">
-
-      ${dropdownSection("Roles", roles)}
-      ${dropdownSection("Attributes", attributes)}
-      ${dropdownSection("Damage Type", damageType)}
-
+      ${createMetaSection("Roles", hero._roles)}
+      ${createMetaSection("Attributes", hero._attrs)}
+      ${createMetaSection("Damage", [hero._dmg])}
     </div>
   `;
-
+  
   return card;
 }
 
-function dropdownSection(title, items) {
+function createMetaSection(title, items) {
   if (!items || items.length === 0) return "";
-
+  
   const chips = items.map(i => `<span class="meta-chip">${i}</span>`).join("");
-
+  
   return `
-    <div class="meta-section">
-      <div class="meta-header" onclick="toggleMeta(this)">
+    <div class="meta-section" onclick="toggleMeta(event)">
+      <div class="meta-header">
         ${title}
         <span>▼</span>
       </div>
@@ -666,42 +625,81 @@ function dropdownSection(title, items) {
   `;
 }
 
-function toggleMeta(header) {
-  const content = header.nextElementSibling;
+function toggleMeta(event) {
+  const section = event.currentTarget;
+  const content = section.querySelector('.meta-content');
   content.classList.toggle("open");
 }
 
 // =====================
-// Filtering Logic
+// Filtering (Optimized)
 // =====================
 function getChecked(id) {
   return [...document.querySelectorAll(`#${id} input:checked`)].map(i => i.value);
 }
 
 function update() {
-  const q = document.getElementById("search").value.toLowerCase();
-  const roles = getChecked("roles");
-  const attrs = getChecked("attributes");
-  const dmg = getChecked("damage");
-
-  const results = heroes.filter(h => {
-    const heroRoles = h.Roles.split(",").map(r => r.trim());
-    const heroAttrs = h.Attributes.split(",").map(a => a.trim());
-    const heroDmg = h["Damage Type"];
-
-    return (
-      h["Hero Name"].toLowerCase().includes(q) &&
-      (roles.length === 0 || roles.every(r => heroRoles.includes(r))) &&
-      (attrs.length === 0 || attrs.every(a => heroAttrs.includes(a))) &&
-      (dmg.length === 0 || dmg.includes(heroDmg))
-    );
+  const searchQuery = document.getElementById("search").value.toLowerCase();
+  const selectedRoles = getChecked("roles");
+  const selectedAttrs = getChecked("attributes");
+  const selectedDmg = getChecked("damage");
+  
+  // Filter heroes
+  filteredHeroes = heroes.filter(hero => {
+    // Name filter
+    if (searchQuery && !hero._nameLower.includes(searchQuery)) return false;
+    
+    // Role filter (ALL selected roles must match)
+    if (selectedRoles.length > 0 && !selectedRoles.every(r => hero._roles.includes(r))) return false;
+    
+    // Attribute filter (ALL selected attributes must match)
+    if (selectedAttrs.length > 0 && !selectedAttrs.every(a => hero._attrs.includes(a))) return false;
+    
+    // Damage type filter
+    if (selectedDmg.length > 0 && !selectedDmg.includes(hero._dmg)) return false;
+    
+    return true;
   });
-
-  const out = document.getElementById("results");
-  out.innerHTML = "";
-  results.forEach(h => out.appendChild(createHeroCard(h)));
+  
+  renderResults();
+  updateStats();
 }
 
+function renderResults() {
+  const container = document.getElementById("results");
+  
+  if (filteredHeroes.length === 0) {
+    container.innerHTML = '<div class="no-results">No heroes found matching your filters.</div>';
+    return;
+  }
+  
+  // Use DocumentFragment for better performance
+  const fragment = document.createDocumentFragment();
+  
+  filteredHeroes.forEach(hero => {
+    fragment.appendChild(createHeroCard(hero));
+  });
+  
+  container.innerHTML = "";
+  container.appendChild(fragment);
+}
+
+function updateStats() {
+  const total = heroes.length;
+  const showing = filteredHeroes.length;
+  const statsEl = document.getElementById("stats");
+  
+  if (showing === total) {
+    statsEl.textContent = `Showing all ${total} heroes`;
+  } else {
+    statsEl.textContent = `Showing ${showing} of ${total} heroes`;
+  }
+}
+
+// =====================
+// Initialize
+// =====================
+loadHeroes();
 
 </script>
 

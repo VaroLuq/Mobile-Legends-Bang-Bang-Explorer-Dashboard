@@ -614,7 +614,7 @@
   {
     "Hero Name":"Ruby",
     "Roles":"Exp Lane, Fighter, Gold Lane, Roamer",
-    "Attributes":"Anti-CC, AoE, CC, Counter-Initiate, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Team Fight",
+    "Attributes":"AoE, CC, Counter-Initiate, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Team Fight",
     "Damage Type":"Physical"
   },
   {
@@ -734,7 +734,7 @@
   {
     "Hero Name":"Akai",
     "Roles":"Exp Lane, Jungler, Roamer, Tank",
-    "Attributes":"CC, Counter-Initiate, Early Game, Initiator, Late Game, Sustain, Tanky, Team Fight",
+    "Attributes":"Anti-CC, CC, Counter-Initiate, Early Game, Initiator, Late Game, Sustain, Tanky, Team Fight",
     "Damage Type":"Physical"
   },
   {
