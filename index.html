@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MLBB Hero Finder</title>
+
+<style>
+/* Background */
+body {
+  font-family: Inter, system-ui, sans-serif;
+  min-height: 100vh;
+  padding: 40px;
+  color: white;
+
+  background: linear-gradient(
+    120deg,
+    #050b1a,
+    #0f172a,
+    #002b36,
+    #001f3f,
+    #0a0f2c
+  );
+  background-size: 400% 400%;
+  animation: cyberGradient 20s ease infinite;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.03) 0px,
+    rgba(255,255,255,0.03) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+
+@keyframes cyberGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* Glass Container */
+.glass {
+  max-width: 1100px;
+  margin: auto;
+  padding: 25px 30px;
+  border-radius: 22px;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border: 1px solid rgba(0,255,255,0.2);
+  box-shadow: 
+    0 0 20px rgba(0,255,255,0.15),
+    0 0 60px rgba(0,255,255,0.05);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Title Glow */
+h1 {
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #00ffff;
+  text-shadow:
+    0 0 10px rgba(0,255,255,0.6),
+    0 0 30px rgba(0,255,255,0.2);
+}
+
+/* Cyberpunk Search Bar */
+#search {
+  margin-top: 12px;
+  width: 420px;
+  max-width: 100%;
+  padding: 14px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,255,255,0.4);
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(10px);
+  color: #00ffff;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s ease;
+  caret-color: #00ffff;
+  box-shadow:
+    0 0 10px rgba(0,255,255,0.15),
+    inset 0 0 8px rgba(0,255,255,0.2);
+}
+
+/* Placeholder */
+#search::placeholder {
+  color: rgba(0,255,255,0.4);
+}
+
+/* Focus Neon Pulse */
+#search:focus {
+  border-color: #00ffff;
+  box-shadow:
+    0 0 12px #00ffff,
+    0 0 30px rgba(0,255,255,0.5),
+    inset 0 0 12px rgba(0,255,255,0.4);
+  animation: searchPulse 2s infinite ease-in-out;
+}
+
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.search-wrapper::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.6;
+}
+
+#search {
+  padding-left: 42px;
+}
+
+
+/* Focus glow animation */
+@keyframes searchPulse {
+  0%,100% { box-shadow: 0 0 12px #00ffff; }
+  50% { box-shadow: 0 0 28px #00ffff; }
+}
+
+
+/* Search Bar */
+input[type=text] {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: rgba(0,0,0,0.3);
+  color: white;
+}
+
+/* Checkbox Groups */
+.group {
+  margin-top: 18px;
+}
+
+.group-title {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 6px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+label {
+  background: rgba(0,0,0,0.4);
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.15s ease,
+    color 0.25s ease;
+  border: 1px solid rgba(0,255,255,0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #9ca3af;
+  backdrop-filter: blur(8px);
+}
+
+/* Hover glow */
+label:hover {
+  color: white;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 0 8px rgba(0,255,255,0.4);
+}
+
+/* Press */
+label:active {
+  transform: scale(0.95);
+}
+
+/* Checked Neon Cyberpunk */
+label:has(input:checked) {
+  color: #00ffff;
+  background: rgba(0,255,255,0.12);
+  border-color: #00ffff;
+  box-shadow:
+    0 0 8px #00ffff,
+    0 0 16px rgba(0,255,255,0.6),
+    inset 0 0 8px rgba(0,255,255,0.4);
+  animation: neonPop 0.25s ease-out, neonPulse 2s infinite ease-in-out;
+}
+
+/* Checkbox accent */
+input[type="checkbox"] {
+  accent-color: cyan;
+}
+
+/* Pop animation */
+@keyframes neonPop {
+  0% { transform: scale(0.85); }
+  60% { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+
+/* Cyberpunk glow pulse */
+@keyframes neonPulse {
+  0%,100% { box-shadow: 0 0 8px #00ffff; }
+  50% { box-shadow: 0 0 18px #00ffff; }
+}
+
+
+
+
+/* Results */
+.results {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+/* Hero card structure */
+.hero-card {
+  background: rgba(0,0,0,0.55);
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(0,255,255,0.15);
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: heroFade 0.35s ease forwards;
+  transform: scale(0.96);
+  opacity: 0;
+  transition: 0.2s ease;
+}
+
+.hero-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 16px rgba(0,255,255,0.4);
+}
+
+/* Role-based card colors */
+.hero-card.role-mage {
+  border-color: rgba(59, 130, 246, 0.5);
+  background: rgba(59, 130, 246, 0.15);
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.3);
+}
+
+.hero-card.role-mage:hover {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+}
+
+.hero-card.role-marksman {
+  border-color: rgba(245, 158, 11, 0.5);
+  background: rgba(245, 158, 11, 0.15);
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.3);
+}
+
+.hero-card.role-marksman:hover {
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.6);
+}
+
+.hero-card.role-fighter {
+  border-color: rgba(239, 68, 68, 0.5);
+  background: rgba(239, 68, 68, 0.15);
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.3);
+}
+
+.hero-card.role-fighter:hover {
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+}
+
+.hero-card.role-assassin {
+  border-color: rgba(168, 85, 247, 0.5);
+  background: rgba(168, 85, 247, 0.15);
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.3);
+}
+
+.hero-card.role-assassin:hover {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+}
+
+.hero-card.role-tank {
+  border-color: rgba(180, 83, 9, 0.5);
+  background: rgba(180, 83, 9, 0.15);
+  box-shadow: 0 0 12px rgba(180, 83, 9, 0.3);
+}
+
+.hero-card.role-tank:hover {
+  box-shadow: 0 0 20px rgba(180, 83, 9, 0.6);
+}
+
+.hero-card.role-support {
+  border-color: rgba(20, 184, 166, 0.5);
+  background: rgba(20, 184, 166, 0.15);
+  box-shadow: 0 0 12px rgba(20, 184, 166, 0.3);
+}
+
+.hero-card.role-support:hover {
+  box-shadow: 0 0 20px rgba(20, 184, 166, 0.6);
+}
+
+/* Header */
+.hero-header {
+  border-bottom: 1px solid rgba(0,255,255,0.2);
+  padding-bottom: 6px;
+}
+
+.hero-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #00ffff;
+  text-shadow: 0 0 6px rgba(0,255,255,0.6);
+}
+
+/* Sections */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.section-title {
+  font-size: 11px;
+  opacity: 0.6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Tag groups */
+.tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* Base tag style */
+.tag {
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(6px);
+  background: rgba(255,255,255,0.08);
+}
+
+/* Role tags */
+.tag.role {
+  color: #00ffff;
+  border-color: rgba(0,255,255,0.4);
+  box-shadow: 0 0 6px rgba(0,255,255,0.2);
+}
+
+/* Attribute tags */
+.tag.attr {
+  color: #ff00ff;
+  border-color: rgba(255,0,255,0.4);
+  box-shadow: 0 0 6px rgba(255,0,255,0.2);
+}
+
+/* Damage tags */
+.tag.dmg {
+  color: #ffcc00;
+  border-color: rgba(255,204,0,0.4);
+  box-shadow: 0 0 6px rgba(255,204,0,0.2);
+}
+
+.hero-meta {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.meta-section {
+  border: 1px solid rgba(0,255,255,0.15);
+  border-radius: 10px;
+  padding: 8px 12px;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+.meta-header {
+  font-weight: bold;
+  color: cyan;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meta-header:hover {
+  text-shadow: 0 0 8px cyan;
+}
+
+.meta-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.meta-content.open {
+  max-height: 200px;
+  opacity: 1;
+}
+
+.meta-chip {
+  display: inline-block;
+  margin: 4px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: rgba(0,255,255,0.15);
+  border: 1px solid cyan;
+  color: cyan;
+  box-shadow: 0 0 8px cyan;
+}
+
+
+
+/* Fade + scale in */
+@keyframes heroFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="glass">
+  <div class="header">
+  <h1>Mobile Legends Hero Database</h1>
+  <div class="search-wrapper">
+  <input id="search" placeholder="Search hero name...">
+</div>
+
+</div>
+
+
+  <div class="group">
+    <div class="group-title">Roles</div>
+    <div id="roles" class="filters"></div>
+  </div>
+
+  <div class="group">
+    <div class="group-title">Attributes</div>
+    <div id="attributes" class="filters"></div>
+  </div>
+
+  <div class="group">
+    <div class="group-title">Damage Type</div>
+    <div id="damage" class="filters"></div>
+  </div>
+
+  <div class="results" id="results"></div>
+</div>
+
+<script>
+// =====================
+// 🔥 PASTE YOUR JSON HERE
+// =====================
+const heroes = 
+[
+  {
+    "Hero Name":"Tigreal",
+    "Role":"Roamer, Tank",
+    "Attributes":"AoE, CC, Initiator, Tanky, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Fanny",
+    "Role":"Assassin, Jungler",
+    "Attributes":"Burst, Damage, Early Game, High Mobility, Late Game, Split Push, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Pharsa",
+    "Role":"Mage, Mid Lane",
+    "Attributes":"AoE, Burst, CC, Damage, Early Game, High Ground, High Mobility, Late Game, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Sora",
+    "Role":"Exp Lane, Fighter, Gold Lane, Roamer",
+    "Attributes":"Anti-CC, AoE, Burst, CC, Damage-Sustain, Early Game, High Mobility, Initiator, Late Game, Single Target, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Obsidia",
+    "Role":"Gold Lane, Marksman",
+    "Attributes":"Burst, CC, Damage, High Mobility, Late Game, Single Target, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Kalea",
+    "Role":"Roamer, Tank",
+    "Attributes":"CC, Early Game, Initiator, Late Game, Pick Off, Semi-Healer, Single Target, Sustain, Tanky, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Lukas",
+    "Role":"Exp Lane, Fighter, Jungler",
+    "Attributes":"Anti-CC, AoE, Burst, CC, Damage-Sustain, Early Game, Initiator, Late Game, Single Target, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Cici",
+    "Role":"Exp Lane, Fighter, Gold Lane",
+    "Attributes":"Anti-Tank, Damage-Sustain, Early Game, High Mobility, Initiator, Late Game, Poke, Single Target, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Suyou",
+    "Role":"Assassin, Jungler",
+    "Attributes":"Anti-CC, AoE, Burst, CC, Damage, Early Game, High Mobility, Late Game, Single Target, Split Push, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Nolan",
+    "Role":"Assassin, Jungler",
+    "Attributes":"Burst, Damage, Early Game, High Mobility, Late Game, Single Target, Split Push, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Chip",
+    "Role":"Roamer, Tank",
+    "Attributes":"AoE, CC, Counter-Initiate, Early Game, High Mobility, Initiator, Late Game, Pick Off, Split Push, Sustain, Tanky, Team Fight",
+    "Damage Type":"Mixed"
+  },
+  {
+    "Hero Name":"Zetian",
+    "Role":"Mage, Mid Lane",
+    "Attributes":"AoE, Burst, CC, Counter-Initiate, Damage, Early Game, High Ground, Initiator, Late Game, Poke, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Zhuxin",
+    "Role":"Mage, Mid Lane",
+    "Attributes":"Anti-Tank, AoE, CC, Damage-Sustain, Early Game, Late Game, Poke, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Ixia",
+    "Role":"Gold Lane, Marksman",
+    "Attributes":"AoE, Burst, CC, Damage, Early Game, High Ground, Initiator, Late Game, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Fredrinn",
+    "Role":"Exp Lane, Fighter, Jungler, Tank",
+    "Attributes":"AoE, Burst, CC, Early Game, High Mobility, Initiator, Late Game, Sustain, Tanky, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Xavier",
+    "Role":"Mage, Mid Lane",
+    "Attributes":"AoE, Burst, CC, Damage, Early Game, High Ground, Late Game, Poke, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Melissa",
+    "Role":"Gold Lane, Marksman",
+    "Attributes":"Anti-Tank, AoE, CC, Counter-Initiate, Damage, Late Game, Poke, Single Target, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Joy",
+    "Role":"Assassin, Exp Lane, Jungler",
+    "Attributes":"Anti-CC, AoE, Burst, Damage, Early Game, High Mobility, Initiator, Late Game, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Novaria",
+    "Role":"Mage, Mid Lane",
+    "Attributes":"Burst, Damage, Early Game, High Mobility, Late Game, Single Target, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Arlott",
+    "Role":"Exp Lane, Fighter, Roamer",
+    "Attributes":"AoE, Burst, CC, Damage-Sustain, Early Game, High Mobility, Initiator, Late Game, Single Target, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Yin",
+    "Role":"Assassin, Exp Lane, Fighter, Gold Lane, Jungler",
+    "Attributes":"Burst, CC, Damage, Early Game, Initiator, Late Game, Single Target, Split Push, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Floryn",
+    "Role":"Roamer, Support",
+    "Attributes":"Early Game, Healer, Late Game, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Julian",
+    "Role":"Exp Lane, Fighter, Jungler",
+    "Attributes":"Anti-CC, AoE, Burst, Damage, Early Game, Late Game, Single Target, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Aamon",
+    "Role":"Assassin, Jungler",
+    "Attributes":"Burst, Damage, Early Game, High Mobility, Late Game, Single Target, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Natan",
+    "Role":"Gold Lane, Marksman",
+    "Attributes":"Anti-Tank, AoE, Burst, CC, Damage, Early Game, High Ground, Late Game, Single Target, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Edith",
+    "Role":"Exp Lane, Marksman, Roamer, Tank",
+    "Attributes":"Anti-Tank, AoE, Burst, CC, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Single Target, Sustain, Tanky, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Aulus",
+    "Role":"Fighter, Jungler",
+    "Attributes":"Anti-Tank, AoE, Burst, Damage, Damage-Sustain, Late Game, Poke, Single Target, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Valentina",
+    "Role":"Exp Lane, Mage, Mid Lane",
+    "Attributes":"Anti-CC, AoE, Burst, CC, Counter-Initiate, Damage, Damage-Sustain, Early Game, High Mobility, Initiator, Late Game, Poke, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Beatrix",
+    "Role":"Gold Lane, Marksman",
+    "Attributes":"Anti-Tank, AoE, Burst, Damage, Early Game, High Ground, Late Game, Poke, Single Target, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Phoveus",
+    "Role":"Exp Lane, Fighter",
+    "Attributes":"Anti-CC, Anti-Tank, AoE, Burst, CC, Damage-Sustain, Early Game, Initiator, Late Game, Single Target, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Paquito",
+    "Role":"Assassin, Exp Lane, Fighter, Gold Lane, Jungler",
+    "Attributes":"AoE, Burst, CC, Damage, Damage-Sustain, Early Game, High Mobility, Late Game, Single Target, Split Push, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Gloo",
+    "Role":"Exp Lane, Roamer, Tank",
+    "Attributes":"CC, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Single Target, Sustain, Tanky, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Mathilda",
+    "Role":"Roamer, Support",
+    "Attributes":"Counter-Initiate, Damage-Sustain, Early Game, Healer, High Mobility, Initiator, Late Game, Poke, Single Target, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Cecilion",
+    "Role":"Mage, Mid Lane",
+    "Attributes":"AoE, Burst, CC, Damage, High Ground, Late Game, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Wanwan",
+    "Role":"Gold Lane, Marksman",
+    "Attributes":"Anti-CC, Anti-Tank, Burst, Counter-Initiate, Damage, Early Game, High Ground, High Mobility, Late Game, Poke, Single Target, Split Push, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Silvanna",
+    "Role":"Exp Lane, Fighter, Gold Lane, Jungler, Roamer",
+    "Attributes":"CC, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Single Target, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Baxia",
+    "Role":"Exp Lane, Jungler, Roamer, Tank",
+    "Attributes":"Anti-Tank, CC, Early Game, High Mobility, Initiator, Late Game, Poke, Single Target, Sustain, Tanky, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Masha",
+    "Role":"Exp Lane, Fighter, Gold Lane, Roamer",
+    "Attributes":"Anti-CC, Burst, Counter-Initiate, Damage, Early Game, High Mobility, Initiator, Late Game, Single Target, Split Push, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"X.Borg",
+    "Role":"Exp Lane, Fighter, Gold Lane, Jungler",
+    "Attributes":"Anti-CC, Anti-Tank, AoE, Burst, Damage-Sustain, Early Game, High Ground, Initiator, Late Game, Poke, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Lylia",
+    "Role":"Mage, Mid Lane",
+    "Attributes":"AoE, CC, Counter-Initiate, Damage, Early Game, Late Game, Poke, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Ling",
+    "Role":"Assassin, Jungler",
+    "Attributes":"Anti-CC, AoE, Burst, CC, Damage, Early Game, High Mobility, Late Game, Single Target, Split Push, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Dyrroth",
+    "Role":"Exp Lane, Fighter, Jungler",
+    "Attributes":"Anti-Tank, AoE, Burst, Damage-Sustain, Early Game, Late Game, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Terizla",
+    "Role":"Exp Lane, Fighter, Roamer, Tank",
+    "Attributes":"AoE, Burst, CC, Counter-Initiate, Damage-Sustain, Early Game, Initiator, Late Game, Sustain, Tanky, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Yve",
+    "Role":"Mage, Mid Lane",
+    "Attributes":"AoE, CC, Damage, Early Game, High Ground, Late Game, Poke, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Atlas",
+    "Role":"Roamer, Tank",
+    "Attributes":"Anti-CC, AoE, CC, Early Game, High Mobility, Initiator, Late Game, Sustain, Tanky, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Barats",
+    "Role":"Exp Lane, Fighter, Jungler, Tank",
+    "Attributes":"AoE, CC, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Sustain, Tanky, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Khaleed",
+    "Role":"Exp Lane, Fighter, Roamer",
+    "Attributes":"AoE, Burst, CC, Damage-Sustain, Early Game, High Mobility, Initiator, Late Game, Sustain, Tanky, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Brody",
+    "Role":"Marksman, Mid Lane",
+    "Attributes":"Burst, CC, Damage, Early Game, Late Game, Single Target, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Luo Yi",
+    "Role":"Mage, Mid Lane",
+    "Attributes":"AoE, Burst, CC, Damage, Early Game, High Ground, Late Game, Split Push, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Benedetta",
+    "Role":"Assassin, Exp Lane, Gold Lane",
+    "Attributes":"Anti-CC, AoE, Burst, Damage, Early Game, High Mobility, Initiator, Late Game, Split Push, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Popol & Kupa",
+    "Role":"Gold Lane, Jungler, Marksman",
+    "Attributes":"Burst, CC, Damage, Early Game, Late Game, Single Target, Split Push, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Yu Zhong",
+    "Role":"Exp Lane, Fighter",
+    "Attributes":"Anti-CC, AoE, Burst, CC, Damage-Sustain, Early Game, Initiator, Late Game, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Carmilla",
+    "Role":"Jungler, Roamer, Support, Tank",
+    "Attributes":"AoE, CC, Counter-Initiate, Early Game, Initiator, Late Game, Sustain, Tanky, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Esmeralda",
+    "Role":"Exp Lane, Fighter, Gold Lane, Tank",
+    "Attributes":"AoE, CC, Early Game, Initiator, Late Game, Poke, Sustain, Tanky, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Guinevere",
+    "Role":"Exp Lane, Fighter, Gold Lane, Jungler, Roamer",
+    "Attributes":"Anti-CC, AoE, CC, Damage-Sustain, Early Game, High Mobility, Initiator, Late Game, Poke, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Faramis",
+    "Role":"Mage, Mid Lane",
+    "Attributes":"AoE, CC, Counter-Initiate, Damage, Early Game, High Mobility, Late Game, Poke, Semi-Healer, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Granger",
+    "Role":"Gold Lane, Marksman",
+    "Attributes":"Burst, Damage, Early Game, High Mobility, Late Game, Single Target, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Minsitthar",
+    "Role":"Exp Lane, Fighter, Gold Lane, Roamer",
+    "Attributes":"Anti-Tank, AoE, Burst, CC, Counter-Initiate, Damage, Early Game, Initiator, Late Game, Poke, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Khufra",
+    "Role":"Roamer, Tank",
+    "Attributes":"AoE, CC, Early Game, Initiator, Late Game, Poke, Sustain, Tanky, Team Fight",
+    "Damage Type":"Mixed"
+  },
+  {
+    "Hero Name":"Badang",
+    "Role":"Exp Lane, Fighter, Roamer",
+    "Attributes":"AoE, Burst, CC, Damage, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Tanky, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Harith",
+    "Role":"Gold Lane, Mage, Marksman",
+    "Attributes":"Burst, Damage-Sustain, Early Game, High Mobility, Late Game, Single Target, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Thamuz",
+    "Role":"Exp Lane, Fighter, Jungler",
+    "Attributes":"Anti-Tank, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Single Target, Tanky, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Kadita",
+    "Role":"Assassin, Mage, Mid Lane, Roamer",
+    "Attributes":"Anti-CC, Burst, CC, Damage, Early Game, High Mobility, Initiator, Late Game, Single Target, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Hanzo",
+    "Role":"Assassin, Jungler",
+    "Attributes":"Anti-CC, Anti-Tank, Burst, Damage, Early Game, High Mobility, Initiator, Late Game, Single Target, Split Push, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Kimmy",
+    "Role":"Jungler, Mage, Marksman, Mid Lane",
+    "Attributes":"CC, Damage, Early Game, Late Game, Poke, Single Target, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Belerick",
+    "Role":"Exp Lane, Roamer, Tank",
+    "Attributes":"AoE, CC, Counter-Initiate, Early Game, Late Game, Poke, Sustain, Tanky, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Lunox",
+    "Role":"Gold Lane, Mage, Mid Lane",
+    "Attributes":"Anti-CC, Burst, Damage, Early Game, Late Game, Single Target, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Aldous",
+    "Role":"Exp Lane, Fighter",
+    "Attributes":"Burst, Damage-Sustain, Late Game, Single Target, Split Push",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Claude",
+    "Role":"Gold Lane, Marksman",
+    "Attributes":"Anti-Tank, AoE, Burst, Damage-Sustain, High Mobility, Initiator, Late Game, Poke, Split Push, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Leomord",
+    "Role":"Exp Lane, Fighter, Jungler",
+    "Attributes":"AoE, Burst, Damage-Sustain, Early Game, High Mobility, Initiator, Late Game, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Selena",
+    "Role":"Mage, Mid Lane, Roamer",
+    "Attributes":"Burst, CC, Damage, Early Game, High Mobility, Late Game, Single Target, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Kaja",
+    "Role":"Roamer, Support, Tank",
+    "Attributes":"CC, Counter-Initiate, Early Game, Initiator, Late Game, Pick Off, Single Target, Sustain, Tanky, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Vale",
+    "Role":"Mage, Mid Lane",
+    "Attributes":"AoE, Burst, CC, Damage, Early Game, High Ground, Late Game, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Helcurt",
+    "Role":"Assassin, Jungler, Roamer",
+    "Attributes":"Burst, CC, Counter-Initiate, Damage, Early Game, High Mobility, Initiator, Late Game, Single Target, Split Push, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Irithel",
+    "Role":"Gold Lane, Marksman",
+    "Attributes":"Burst, Damage, Early Game, High Mobility, Late Game, Single Target, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Hylos",
+    "Role":"Exp Lane, Roamer, Tank",
+    "Attributes":"AoE, CC, Early Game, Initiator, Late Game, Semi-Healer, Sustain, Tanky, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Odette",
+    "Role":"Mage, Mid Lane",
+    "Attributes":"AoE, Burst, CC, Counter-Initiate, Damage, Early Game, Initiator, Late Game, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Diggie",
+    "Role":"Roamer, Support",
+    "Attributes":"Anti-CC, AoE, CC, Counter-Initiate, Early Game, Late Game, Semi-Healer, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Harley",
+    "Role":"Assassin, Gold Lane, Jungler, Mage, Mid Lane",
+    "Attributes":"Anti-Tank, Burst, Damage, Early Game, High Mobility, Late Game, Single Target, Split Push, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Argus",
+    "Role":"Exp Lane, Fighter, Gold Lane",
+    "Attributes":"Anti-Tank, Burst, Damage-Sustain, High Mobility, Late Game, Single Target, Split Push, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Grock",
+    "Role":"Exp Lane, Fighter, Roamer, Tank",
+    "Attributes":"Anti-CC, AoE, Burst, CC, Damage, Early Game, Initiator, Late Game, Sustain, Tanky, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Zhask",
+    "Role":"Mage, Mid Lane",
+    "Attributes":"CC, Counter-Initiate, Damage, Early Game, Late Game, Poke, Single Target, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Lancelot",
+    "Role":"Assassin, Jungler",
+    "Attributes":"Anti-CC, AoE, Burst, Damage, Early Game, High Mobility, Late Game, Split Push, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Chang'e",
+    "Role":"Gold Lane, Mage, Mid Lane",
+    "Attributes":"Damage, Early Game, High Ground, Late Game, Poke, Single Target, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Hanabi",
+    "Role":"Gold Lane, Marksman",
+    "Attributes":"Anti-CC, Anti-Tank, CC, Damage, High Ground, Late Game, Poke, Single Target, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Gusion",
+    "Role":"Assassin, Jungler, Mid Lane",
+    "Attributes":"Burst, Damage, Early Game, High Mobility, Late Game, Single Target, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Uranus",
+    "Role":"Exp Lane, Jungler, Tank",
+    "Attributes":"AoE, Early Game, Initiator, Late Game, Poke, Sustain, Tanky, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Martis",
+    "Role":"Exp Lane, Fighter, Jungler",
+    "Attributes":"Anti-CC, Burst, CC, Damage-Sustain, Early Game, Single Target, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Angela",
+    "Role":"Support, Healer",
+    "Attributes":"Early Game, Healer, Late Game, Poke, Single Target, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Valir",
+    "Role":"Mage, Mid Lane",
+    "Attributes":"Anti-CC, AoE, CC, Damage-Sustain, Early Game, Late Game, Poke, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Jawhead",
+    "Role":"Exp Lane, Fighter, Jungler, Roamer",
+    "Attributes":"CC, Counter-Initiate, Damage, Early Game, High Mobility, Initiator, Late Game, Poke, Single Target, Sustain, Tanky, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Lesley",
+    "Role":"Gold Lane, Marksman",
+    "Attributes":"Burst, Damage, Early Game, Late Game, Single Target, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Gatotkaca",
+    "Role":"Exp Lane, Fighter, Roamer, Tank",
+    "Attributes":"AoE, CC, Early Game, High Ground, Initiator, Late Game, Poke, Sustain, Tanky, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Karrie",
+    "Role":"Gold Lane, Marksman",
+    "Attributes":"Anti-Tank, Burst, Damage, Early Game, High Mobility, Late Game, Single Target, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Roger",
+    "Role":"Assassin, Fighter, Gold Lane, Jungler",
+    "Attributes":"Anti-Tank, Burst, Damage, Early Game, High Mobility, Late Game, Single Target, Split Push, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Cyclops",
+    "Role":"Mage, Mid Lane",
+    "Attributes":"CC, Damage-Sustain, Early Game, Late Game, Poke, Single Target, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Hilda",
+    "Role":"Exp Lane, Roamer, Tank",
+    "Attributes":"Anti-Tank, Burst, Early Game, High Mobility, Initiator, Late Game, Single Target, Sustain, Tanky, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Aurora",
+    "Role":"Mage, Mid Lane",
+    "Attributes":"AoE, Burst, CC, Damage, Early Game, High Ground, Initiator, Late Game, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Vexana",
+    "Role":"Mage, Mid Lane",
+    "Attributes":"AoE, Burst, CC, Damage, Early Game, High Ground, Initiator, Late Game, Poke, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Lapu-Lapu",
+    "Role":"Exp Lane, Fighter, Gold Lane",
+    "Attributes":"Anti-CC, AoE, Burst, CC, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Estes",
+    "Role":"Roamer, Support",
+    "Attributes":"AoE, Early Game, Healer, Late Game, Sustain, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Johnson",
+    "Role":"Jungler, Roamer, Tank",
+    "Attributes":"AoE, CC, Early Game, High Mobility, Initiator, Late Game, Sustain, Tanky, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Ruby",
+    "Role":"Exp Lane, Fighter, Gold Lane, Roamer",
+    "Attributes":"Anti-CC, AoE, CC, Counter-Initiate, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Gord",
+    "Role":"Mage, Mid Lane",
+    "Attributes":"AoE, CC, Damage, Early Game, High Ground, Late Game, Poke, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Alpha",
+    "Role":"Exp Lane, Fighter, Jungler",
+    "Attributes":"Anti-Tank, AoE, CC, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Freya",
+    "Role":"Exp Lane, Fighter, Gold Lane, Jungler",
+    "Attributes":"AoE, Burst, CC, Damage-Sustain, Early Game, High Mobility, Initiator, Late Game, Poke, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Yi Sun-shin",
+    "Role":"Assassin, Jungler",
+    "Attributes":"Anti-CC, AoE, Burst, CC, Damage, Early Game, High Mobility, Late Game, Poke, Single Target, Split Push, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Chou",
+    "Role":"Exp Lane, Fighter, Gold Lane, Roamer",
+    "Attributes":"Anti-CC, CC, Damage, Burst, Early Game, High Mobility, Initiator, Late Game, Pick Off, Poke, Single Target, Split Push, Sustain, Tanky, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Kagura",
+    "Role":"Mage, Mid Lane",
+    "Attributes":"Anti-CC, AoE, Burst, CC, Damage, Early Game, High Mobility, Late Game, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Moskov",
+    "Role":"Gold Lane, Marksman",
+    "Attributes":"Anti-Tank, CC, Damage, High Mobility, Late Game, Poke, Single Target, Split Push, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Sun",
+    "Role":"Assassin, Exp Lane, Fighter, Gold Lane, Jungler",
+    "Attributes":"Anti-CC, Anti-Tank, Damage, High Mobility, Late Game, Poke, Single Target, Split Push",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Natalia",
+    "Role":"Assassin, Jungler, Roamer",
+    "Attributes":"Burst, CC, Damage, Early Game, High Mobility, Initiator, Late Game, Single Target, Split Push",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Hayabusa",
+    "Role":"Assassin, Jungler",
+    "Attributes":"Anti-CC, AoE, Burst, Damage, Early Game, High Mobility, Late Game, Split Push, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Miya",
+    "Role":"Gold Lane, Marksman",
+    "Attributes":"Anti-CC, Burst, Damage, High Mobility, Late Game, Split Push, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Eudora",
+    "Role":"Mage, Mid Lane",
+    "Attributes":"Burst, CC, Damage, Single Target, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Clint",
+    "Role":"Gold Lane, Marksman",
+    "Attributes":"Burst, Damage, Early Game, Late Game, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Lolita",
+    "Role":"Roamer, Support, Tank",
+    "Attributes":"CC, Early Game, Initiator, Late Game, Semi-Healer, Sustain, Tanky, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Minotaur",
+    "Role":"Roamer, Support, Tank",
+    "Attributes":"CC, Counter-Initiate, Early Game, Healer, Initiator, Late Game, Sustain, Tanky, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Bruno",
+    "Role":"Gold Lane, Marksman",
+    "Attributes":"Burst, Damage, Late Game, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Rafaela",
+    "Role":"Roamer, Support",
+    "Attributes":"CC, Early Game, Healer, Late Game, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Layla",
+    "Role":"Gold Lane, Marksman",
+    "Attributes":"Burst, Damage, Late Game, Single Target, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Zilong",
+    "Role":"Assassin, Exp Lane, Fighter, Gold Lane, Jungler",
+    "Attributes":"Burst, Damage, High Mobility, Late Game, Single Target, Split Push",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Akai",
+    "Role":"Exp Lane, Jungler, Roamer, Tank",
+    "Attributes":"CC, Counter-Initiate, Early Game, Initiator, Late Game, Sustain, Tanky, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Alice",
+    "Role":"Exp Lane, Jungler, Tank",
+    "Attributes":"AoE, CC, Early Game, Late Game, Sustain, Tanky, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Franco",
+    "Role":"Roamer, Tank",
+    "Attributes":"CC, Early Game, Initiator, Late Game, Pick Off, Single Target, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Karina",
+    "Role":"Assassin, Jungler",
+    "Attributes":"Burst, Damage, Early Game, High Mobility, Late Game, Single Target, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Nana",
+    "Role":"Mage, Mid Lane",
+    "Attributes":"AoE, CC, Damage, Early Game, Late Game, Team Fight",
+    "Damage Type":"Magic"
+  },
+  {
+    "Hero Name":"Balmond",
+    "Role":"Exp Lane, Fighter, Jungler, Tank",
+    "Attributes":"Burst, Damage-Sustain, Early Game, Late Game, Poke, Tanky, Team Fight",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Saber",
+    "Role":"Assassin, Jungler, Roamer",
+    "Attributes":"Burst, Damage, Early Game, Late Game, Single Target, Split Push",
+    "Damage Type":"Physical"
+  },
+  {
+    "Hero Name":"Bane",
+    "Role":"Exp Lane, Fighter, Gold Lane, Jungler",
+    "Attributes":"Anti-Tank, Burst, CC, Damage, Early Game, Late Game, Split Push, Team Fight",
+    "Damage Type":"Mixed"
+  },
+  {
+    "Hero Name":"Alucard",
+    "Role":"Assassin, Exp Lane, Fighter, Jungler",
+    "Attributes":"Burst, Damage, Damage-Sustain, Early Game, High Mobility, Late Game, Team Fight",
+    "Damage Type":"Physical"
+  }
+];
+
+// =====================
+// Auto Extract Filters
+// =====================
+function getUnique(field) {
+  const set = new Set();
+  heroes.forEach(h => {
+    if (!h[field]) return;
+    h[field].split(",").map(x => x.trim()).forEach(x => set.add(x));
+  });
+  return [...set].sort();
+}
+
+
+function buildCheckboxes(id, items) {
+  const div = document.getElementById(id);
+  items.forEach(x => {
+    div.innerHTML += `<label><input type="checkbox" value="${x}"> ${x}</label>`;
+  });
+}
+
+function createHeroCard(hero) {
+  const card = document.createElement("div");
+  card.className = "hero-card";
+
+  const roles = hero.Role ? hero.Role.split(",").map(r => r.trim()) : [];
+  const attributes = hero.Attributes ? hero.Attributes.split(",").map(a => a.trim()) : [];
+  const damageType = hero["Damage Type"] ? [hero["Damage Type"]] : [];
+
+  // Add role-based color class - check for specific roles in priority order
+  const rolePriority = ['Mage', 'Marksman', 'Fighter', 'Assassin', 'Tank', 'Support'];
+  let roleClass = null;
+  
+  for (const priorityRole of rolePriority) {
+    if (roles.includes(priorityRole)) {
+      roleClass = priorityRole.toLowerCase();
+      break;
+    }
+  }
+  
+  if (roleClass) {
+    card.classList.add(`role-${roleClass}`);
+  }
+
+  card.innerHTML = `
+    <div class="hero-name">${hero["Hero Name"]}</div>
+
+    <div class="hero-meta">
+
+      ${dropdownSection("Roles", roles)}
+      ${dropdownSection("Attributes", attributes)}
+      ${dropdownSection("Damage Type", damageType)}
+
+    </div>
+  `;
+
+  return card;
+}
+
+function dropdownSection(title, items) {
+  if (!items || items.length === 0) return "";
+
+  const chips = items.map(i => `<span class="meta-chip">${i}</span>`).join("");
+
+  return `
+    <div class="meta-section">
+      <div class="meta-header" onclick="toggleMeta(this)">
+        ${title}
+        <span>▼</span>
+      </div>
+      <div class="meta-content">
+        ${chips}
+      </div>
+    </div>
+  `;
+}
+
+function toggleMeta(header) {
+  const content = header.nextElementSibling;
+  content.classList.toggle("open");
+}
+
+buildCheckboxes("roles", getUnique("Role"));
+buildCheckboxes("attributes", getUnique("Attributes"));
+buildCheckboxes("damage", getUnique("Damage Type"));
+
+// =====================
+// Filtering Logic
+// =====================
+document.querySelectorAll("input").forEach(i =>
+  i.addEventListener("input", update)
+);
+
+function getChecked(id) {
+  return [...document.querySelectorAll(`#${id} input:checked`)].map(i => i.value);
+}
+
+function update() {
+  const q = document.getElementById("search").value.toLowerCase();
+  const roles = getChecked("roles");
+  const attrs = getChecked("attributes");
+  const dmg = getChecked("damage");
+
+  const results = heroes.filter(h => {
+    const heroRoles = h.Role.split(",").map(r => r.trim());
+    const heroAttrs = h.Attributes.split(",").map(a => a.trim());
+    const heroDmg = h["Damage Type"];
+
+    return (
+      h["Hero Name"].toLowerCase().includes(q) &&
+      (roles.length === 0 || roles.some(r => heroRoles.includes(r))) &&
+      (attrs.length === 0 || attrs.every(a => heroAttrs.includes(a))) &&
+      (dmg.length === 0 || dmg.includes(heroDmg))
+    );
+  });
+
+  const out = document.getElementById("results");
+  out.innerHTML = "";
+  results.forEach(h => out.appendChild(createHeroCard(h)));
+}
+
+// Display all heroes on page load
+update();
+
+</script>
+
+</body>
+</html>
