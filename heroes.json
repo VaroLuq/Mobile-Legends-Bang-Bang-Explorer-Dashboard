@@ -26,7 +26,7 @@
   {
     "Hero Name":"Obsidia",
     "Roles":"Gold Lane, Marksman",
-    "Attributes":"Burst, CC, Damage, High Mobility, Late Game, Single Target, Team Fight",
+    "Attributes":"Burst, CC, Damage, Late Game, Single Target, Team Fight",
     "Damage Type":"Physical"
   },
   {
@@ -146,7 +146,7 @@
   {
     "Hero Name":"Natan",
     "Roles":"Gold Lane, Marksman",
-    "Attributes":"Anti-Tank, AoE, Burst, CC, Damage, Early Game, High Ground, Late Game, Single Target, Team Fight",
+    "Attributes":"Anti-Tank, AoE, Burst, CC, Damage, Early Game, Late Game, Single Target, Team Fight, High Ground",
     "Damage Type":"Magic"
   },
   {
@@ -206,7 +206,7 @@
   {
     "Hero Name":"Wanwan",
     "Roles":"Gold Lane, Marksman",
-    "Attributes":"Anti-CC, Anti-Tank, Burst, Counter-Initiate, Damage, Early Game, High Ground, High Mobility, Late Game, Poke, Single Target, Split Push, Team Fight",
+    "Attributes":"Anti-CC, Anti-Tank, Burst, Counter-Initiate, Damage, Early Game, High Mobility, Late Game, Poke, Single Target, Split Push, Team Fight",
     "Damage Type":"Physical"
   },
   {
@@ -680,7 +680,7 @@
   {
     "Hero Name":"Miya",
     "Roles":"Gold Lane, Marksman",
-    "Attributes":"Anti-CC, Burst, Damage, High Mobility, Late Game, Split Push, Team Fight",
+    "Attributes":"Anti-CC, Burst, Damage, Late Game, Split Push, High Ground, Team Fight",
     "Damage Type":"Physical"
   },
   {
@@ -722,7 +722,7 @@
   {
     "Hero Name":"Layla",
     "Roles":"Gold Lane, Marksman",
-    "Attributes":"Burst, Damage, Late Game, Single Target, Team Fight",
+    "Attributes":"Burst, Damage, Late Game, Single Target, Team Fight, High Ground",
     "Damage Type":"Physical"
   },
   {
