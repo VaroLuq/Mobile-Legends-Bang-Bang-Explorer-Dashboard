@@ -315,8 +315,28 @@ input[type="checkbox"] {
 /* Multi-role gradient - Simplified */
 .hero-card.multi-role {
   background: linear-gradient(135deg, var(--role1-bg) 0%, var(--role2-bg) 100%);
-  border: 1px solid;
-  border-image: linear-gradient(135deg, var(--role1-border), var(--role2-border)) 1;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  box-shadow: 
+    0 0 12px var(--role1-glow),
+    0 0 12px var(--role2-glow);
+}
+
+.hero-card.multi-role::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 16px;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--role1-border), var(--role2-border));
+  -webkit-mask: 
+    linear-gradient(#fffffffd 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .hero-name {
@@ -582,15 +602,20 @@ function createHeroCard(hero) {
   
   // Apply role-based styling
   const heroMainRoles = hero._roles.filter(role => MAIN_ROLES.includes(role));
-  
+  // console.log(heroMainRoles)
+  // console.log("---------")
   if (heroMainRoles.length >= 2) {
     const role1 = heroMainRoles[0];
     const role2 = heroMainRoles[1];
     card.classList.add('multi-role');
     card.style.setProperty('--role1-bg', ROLE_COLORS[role1].bg);
     card.style.setProperty('--role1-border', ROLE_COLORS[role1].border);
+    // console.log(ROLE_COLORS[role1].border)
+    // card.style.setProperty('--role1-glow', ROLE_COLORS[role1].glow);
     card.style.setProperty('--role2-bg', ROLE_COLORS[role2].bg);
     card.style.setProperty('--role2-border', ROLE_COLORS[role2].border);
+    // console.log(ROLE_COLORS[role2].border)
+    // card.style.setProperty('--role2-glow', ROLE_COLORS[role2].glow);
   } else if (heroMainRoles.length === 1) {
     card.classList.add(`role-${heroMainRoles[0].toLowerCase()}`);
   }
