@@ -194,7 +194,7 @@
   {
     "Hero Name":"Mathilda",
     "Roles":"Roamer, Support",
-    "Attributes":"Counter-Initiate, Damage-Sustain, Early Game, Healer, High Mobility, Initiator, Late Game, Poke, Single Target, Team Fight",
+    "Attributes":"Damage-Sustain, Early Game, Healer, High Mobility, Initiator, Late Game, Poke, Single Target, Team Fight",
     "Damage Type":"Magic"
   },
   {
@@ -206,7 +206,7 @@
   {
     "Hero Name":"Wanwan",
     "Roles":"Gold Lane, Marksman",
-    "Attributes":"Anti-CC, Anti-Tank, Burst, Counter-Initiate, Damage, Early Game, High Mobility, Late Game, Poke, Single Target, Split Push, Team Fight",
+    "Attributes":"Anti-CC, Anti-Tank, Burst, Damage, Early Game, High Mobility, Late Game, Poke, Single Target, Split Push, Team Fight",
     "Damage Type":"Physical"
   },
   {
@@ -224,7 +224,7 @@
   {
     "Hero Name":"Masha",
     "Roles":"Exp Lane, Fighter, Gold Lane, Roamer",
-    "Attributes":"Anti-CC, Burst, Counter-Initiate, Damage, Early Game, High Mobility, Initiator, Late Game, Single Target, Split Push, Team Fight",
+    "Attributes":"Anti-CC, Burst, Damage, Early Game, High Mobility, Initiator, Late Game, Single Target, Split Push, Team Fight",
     "Damage Type":"Physical"
   },
   {
@@ -236,7 +236,7 @@
   {
     "Hero Name":"Lylia",
     "Roles":"Mage, Mid Lane",
-    "Attributes":"AoE, CC, Counter-Initiate, Damage, Early Game, Late Game, Poke, Team Fight",
+    "Attributes":"AoE, CC, Damage, Early Game, Late Game, Poke, Team Fight",
     "Damage Type":"Magic"
   },
   {
@@ -428,7 +428,7 @@
   {
     "Hero Name":"Kaja",
     "Roles":"Roamer, Support, Tank",
-    "Attributes":"CC, Counter-Initiate, Early Game, Initiator, Late Game, Pick Off, Single Target, Sustain, Tanky, Team Fight",
+    "Attributes":"CC, Early Game, Initiator, Late Game, Pick Off, Single Target, Sustain, Tanky, Team Fight",
     "Damage Type":"Magic"
   },
   {
@@ -488,7 +488,7 @@
   {
     "Hero Name":"Zhask",
     "Roles":"Mage, Mid Lane",
-    "Attributes":"CC, Counter-Initiate, Damage, Early Game, Late Game, Poke, Single Target, Team Fight",
+    "Attributes":"CC, Damage, Early Game, Late Game, Poke, Single Target, Team Fight",
     "Damage Type":"Magic"
   },
   {
@@ -542,7 +542,7 @@
   {
     "Hero Name":"Jawhead",
     "Roles":"Exp Lane, Fighter, Jungler, Roamer",
-    "Attributes":"CC, Counter-Initiate, Damage, Early Game, High Mobility, Initiator, Late Game, Poke, Single Target, Sustain, Tanky, Team Fight",
+    "Attributes":"CC, Damage, Early Game, High Mobility, Initiator, Late Game, Poke, Single Target, Sustain, Tanky, Team Fight",
     "Damage Type":"Physical"
   },
   {
