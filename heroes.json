@@ -266,7 +266,7 @@
   {
     "Hero Name":"Atlas",
     "Roles":"Roamer, Tank",
-    "Attributes":"Anti-CC, AoE, CC, Early Game, High Mobility, Initiator, Late Game, Sustain, Tanky, Team Fight",
+    "Attributes":"AoE, CC, Early Game, High Mobility, Initiator, Late Game, Sustain, Tanky, Team Fight",
     "Damage Type":"Magic"
   },
   {
@@ -614,7 +614,7 @@
   {
     "Hero Name":"Ruby",
     "Roles":"Exp Lane, Fighter, Gold Lane, Roamer",
-    "Attributes":"AoE, CC, Counter-Initiate, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Team Fight",
+    "Attributes":"AoE, CC, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Team Fight",
     "Damage Type":"Physical"
   },
   {
