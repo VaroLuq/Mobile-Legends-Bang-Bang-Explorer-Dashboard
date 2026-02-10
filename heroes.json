@@ -19,7 +19,7 @@
   },
   {
     "Hero Name":"Sora",
-    "Roles":"Exp Lane, Fighter, Gold Lane, Roamer",
+    "Roles":"Exp Lane, Fighter, Gold Lane, Roamer, Assassin",
     "Attributes":"Anti-CC, AoE, Burst, CC, Damage-Sustain, Early Game, High Mobility, Initiator, Late Game, Single Target, Team Fight",
     "Damage Type":"Physical"
   },
@@ -319,7 +319,7 @@
   },
   {
     "Hero Name":"Esmeralda",
-    "Roles":"Exp Lane, Fighter, Gold Lane, Tank",
+    "Roles":"Exp Lane, Mage, Gold Lane, Tank",
     "Attributes":"AoE, CC, Early Game, Initiator, Late Game, Poke, Sustain, Tanky, Team Fight",
     "Damage Type":"Magic"
   },
