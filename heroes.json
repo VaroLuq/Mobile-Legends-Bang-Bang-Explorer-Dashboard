@@ -2,7 +2,7 @@
   {
     "Hero Name":"Tigreal",
     "Roles":"Roamer, Tank",
-    "Attributes":"AoE, CC, Initiator, Tanky, Team Fight",
+    "Attributes":"AoE, CC, Initiator, Team Fight",
     "Damage Type":"Physical"
   },
   {
@@ -32,7 +32,7 @@
   {
     "Hero Name":"Kalea",
     "Roles":"Roamer, Tank",
-    "Attributes":"CC, Early Game, Initiator, Late Game, Pick Off, Semi-Healer, Single Target, Sustain, Tanky, Team Fight, Backline",
+    "Attributes":"CC, Early Game, Initiator, Late Game, Pick Off, Semi-Healer, Single Target, Sustain, Team Fight, Backline",
     "Damage Type":"Physical"
   },
   {
@@ -62,7 +62,7 @@
   {
     "Hero Name":"Chip",
     "Roles":"Roamer, Tank",
-    "Attributes":"AoE, CC, Counter-Initiate, Early Game, High Mobility, Initiator, Late Game, Pick Off, Split Push, Sustain, Tanky, Team Fight, Backline",
+    "Attributes":"AoE, CC, Counter-Initiate, Early Game, High Mobility, Initiator, Late Game, Pick Off, Split Push, Sustain, Team Fight, Backline",
     "Damage Type":"Mixed"
   },
   {
@@ -86,7 +86,7 @@
   {
     "Hero Name":"Fredrinn",
     "Roles":"Exp Lane, Fighter, Jungler, Tank",
-    "Attributes":"AoE, Burst, CC, Early Game, High Mobility, Initiator, Late Game, Sustain, Tanky, Team Fight",
+    "Attributes":"AoE, Burst, CC, Early Game, High Mobility, Initiator, Late Game, Sustain, Team Fight",
     "Damage Type":"Physical"
   },
   {
@@ -152,7 +152,7 @@
   {
     "Hero Name":"Edith",
     "Roles":"Exp Lane, Marksman, Roamer, Tank",
-    "Attributes":"Anti-Tank, AoE, Burst, CC, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Single Target, Sustain, Tanky, Team Fight",
+    "Attributes":"Anti-Tank, AoE, Burst, CC, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Single Target, Sustain, Team Fight",
     "Damage Type":"Magic"
   },
   {
@@ -188,7 +188,7 @@
   {
     "Hero Name":"Gloo",
     "Roles":"Exp Lane, Roamer, Tank",
-    "Attributes":"CC, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Single Target, Sustain, Tanky, Team Fight",
+    "Attributes":"CC, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Single Target, Sustain, Team Fight",
     "Damage Type":"Magic"
   },
   {
@@ -218,7 +218,7 @@
   {
     "Hero Name":"Baxia",
     "Roles":"Exp Lane, Jungler, Roamer, Tank",
-    "Attributes":"Anti-Tank, CC, Early Game, Backline, High Mobility, Initiator, Late Game, Poke, Single Target, Sustain, Tanky, Team Fight",
+    "Attributes":"Anti-Tank, CC, Early Game, Backline, High Mobility, Initiator, Late Game, Poke, Single Target, Sustain, Team Fight",
     "Damage Type":"Magic"
   },
   {
@@ -254,7 +254,7 @@
   {
     "Hero Name":"Terizla",
     "Roles":"Exp Lane, Fighter, Roamer, Tank",
-    "Attributes":"AoE, Burst, CC, Counter-Initiate, Damage-Sustain, Early Game, Initiator, Late Game, Sustain, Tanky, Team Fight",
+    "Attributes":"AoE, Burst, CC, Counter-Initiate, Damage-Sustain, Early Game, Initiator, Late Game, Sustain, Team Fight",
     "Damage Type":"Physical"
   },
   {
@@ -266,19 +266,19 @@
   {
     "Hero Name":"Atlas",
     "Roles":"Roamer, Tank",
-    "Attributes":"AoE, CC, Early Game, Backline, High Mobility, Initiator, Late Game, Sustain, Tanky, Team Fight",
+    "Attributes":"AoE, CC, Early Game, Backline, High Mobility, Initiator, Late Game, Sustain, Team Fight",
     "Damage Type":"Magic"
   },
   {
     "Hero Name":"Barats",
     "Roles":"Exp Lane, Fighter, Jungler, Tank",
-    "Attributes":"AoE, CC, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Sustain, Tanky, Team Fight",
+    "Attributes":"AoE, CC, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Sustain, Team Fight",
     "Damage Type":"Physical"
   },
   {
     "Hero Name":"Khaleed",
     "Roles":"Exp Lane, Fighter, Roamer",
-    "Attributes":"AoE, Burst, CC, Damage-Sustain, Early Game, High Mobility, Initiator, Late Game, Sustain, Tanky, Team Fight",
+    "Attributes":"AoE, Burst, CC, Damage-Sustain, Early Game, High Mobility, Initiator, Late Game, Sustain, Team Fight",
     "Damage Type":"Physical"
   },
   {
@@ -314,13 +314,13 @@
   {
     "Hero Name":"Carmilla",
     "Roles":"Jungler, Roamer, Support, Tank",
-    "Attributes":"AoE, CC, Counter-Initiate, Early Game, Initiator, Late Game, Sustain, Tanky, Team Fight",
+    "Attributes":"AoE, CC, Counter-Initiate, Early Game, Initiator, Late Game, Sustain, Team Fight",
     "Damage Type":"Magic"
   },
   {
     "Hero Name":"Esmeralda",
     "Roles":"Exp Lane, Mage, Gold Lane, Tank",
-    "Attributes":"AoE, CC, Early Game, Initiator, Late Game, Poke, Sustain, Tanky, Team Fight",
+    "Attributes":"AoE, CC, Early Game, Initiator, Late Game, Poke, Sustain, Team Fight",
     "Damage Type":"Magic"
   },
   {
@@ -350,13 +350,13 @@
   {
     "Hero Name":"Khufra",
     "Roles":"Roamer, Tank",
-    "Attributes":"AoE, CC, Early Game, Initiator, Late Game, Poke, Sustain, Tanky, Team Fight, Anti-Dash",
+    "Attributes":"AoE, CC, Early Game, Initiator, Late Game, Poke, Sustain, Team Fight, Anti-Dash",
     "Damage Type":"Mixed"
   },
   {
     "Hero Name":"Badang",
     "Roles":"Exp Lane, Fighter, Roamer",
-    "Attributes":"AoE, Burst, CC, Damage, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Tanky, Team Fight",
+    "Attributes":"AoE, Burst, CC, Damage, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Team Fight",
     "Damage Type":"Physical"
   },
   {
@@ -368,7 +368,7 @@
   {
     "Hero Name":"Thamuz",
     "Roles":"Exp Lane, Fighter, Jungler",
-    "Attributes":"Anti-Tank, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Single Target, Tanky, Team Fight",
+    "Attributes":"Anti-Tank, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Single Target, Team Fight",
     "Damage Type":"Physical"
   },
   {
@@ -392,7 +392,7 @@
   {
     "Hero Name":"Belerick",
     "Roles":"Exp Lane, Roamer, Tank",
-    "Attributes":"AoE, CC, Counter-Initiate, Early Game, Late Game, Poke, Sustain, Tanky, Team Fight",
+    "Attributes":"AoE, CC, Counter-Initiate, Early Game, Late Game, Poke, Sustain, Team Fight",
     "Damage Type":"Magic"
   },
   {
@@ -428,7 +428,7 @@
   {
     "Hero Name":"Kaja",
     "Roles":"Roamer, Support, Tank",
-    "Attributes":"CC, Early Game, Initiator, Late Game, Pick Off, Single Target, Sustain, Tanky, Team Fight",
+    "Attributes":"CC, Early Game, Initiator, Late Game, Pick Off, Single Target, Sustain, Team Fight",
     "Damage Type":"Magic"
   },
   {
@@ -452,7 +452,7 @@
   {
     "Hero Name":"Hylos",
     "Roles":"Exp Lane, Roamer, Tank",
-    "Attributes":"AoE, CC, Early Game, Initiator, Late Game, Semi-Healer, Sustain, Tanky, Team Fight",
+    "Attributes":"AoE, CC, Early Game, Initiator, Late Game, Semi-Healer, Sustain, Team Fight",
     "Damage Type":"Magic"
   },
   {
@@ -482,7 +482,7 @@
   {
     "Hero Name":"Grock",
     "Roles":"Exp Lane, Fighter, Roamer, Tank",
-    "Attributes":"Anti-CC, AoE, Burst, CC, Damage, Early Game, Initiator, Late Game, Sustain, Tanky, Team Fight",
+    "Attributes":"Anti-CC, AoE, Burst, CC, Damage, Early Game, Initiator, Late Game, Sustain, Team Fight",
     "Damage Type":"Physical"
   },
   {
@@ -518,7 +518,7 @@
   {
     "Hero Name":"Uranus",
     "Roles":"Exp Lane, Jungler, Tank",
-    "Attributes":"AoE, Early Game, Initiator, Late Game, Poke, Sustain, Tanky, Team Fight, Backline",
+    "Attributes":"AoE, Early Game, Initiator, Late Game, Poke, Sustain, Team Fight, Backline",
     "Damage Type":"Magic"
   },
   {
@@ -542,7 +542,7 @@
   {
     "Hero Name":"Jawhead",
     "Roles":"Exp Lane, Fighter, Jungler, Roamer",
-    "Attributes":"CC, Damage, Early Game, High Mobility, Initiator, Late Game, Poke, Single Target, Sustain, Tanky, Team Fight",
+    "Attributes":"CC, Damage, Early Game, High Mobility, Initiator, Late Game, Poke, Single Target, Sustain, Team Fight",
     "Damage Type":"Physical"
   },
   {
@@ -554,7 +554,7 @@
   {
     "Hero Name":"Gatotkaca",
     "Roles":"Exp Lane, Fighter, Roamer, Tank",
-    "Attributes":"AoE, CC, Early Game, High Ground, Initiator, Late Game, Poke, Sustain, Tanky, Team Fight, Backline",
+    "Attributes":"AoE, CC, Early Game, High Ground, Initiator, Late Game, Poke, Sustain, Team Fight, Backline",
     "Damage Type":"Magic"
   },
   {
@@ -578,7 +578,7 @@
   {
     "Hero Name":"Hilda",
     "Roles":"Exp Lane, Roamer, Tank",
-    "Attributes":"Anti-Tank, Burst, Early Game, High Mobility, Initiator, Late Game, Single Target, Sustain, Tanky, Team Fight, Backline",
+    "Attributes":"Anti-Tank, Burst, Early Game, High Mobility, Initiator, Late Game, Single Target, Sustain, Team Fight, Backline",
     "Damage Type":"Physical"
   },
   {
@@ -608,7 +608,7 @@
   {
     "Hero Name":"Johnson",
     "Roles":"Jungler, Roamer, Tank",
-    "Attributes":"AoE, CC, Early Game, High Mobility, Initiator, Late Game, Sustain, Tanky, Team Fight, Backline",
+    "Attributes":"AoE, CC, Early Game, High Mobility, Initiator, Late Game, Sustain, Team Fight, Backline",
     "Damage Type":"Magic"
   },
   {
@@ -644,7 +644,7 @@
   {
     "Hero Name":"Chou",
     "Roles":"Exp Lane, Fighter, Gold Lane, Roamer",
-    "Attributes":"Anti-CC, CC, Damage, Burst, Early Game, High Mobility, Initiator, Late Game, Pick Off, Poke, Single Target, Split Push, Sustain, Tanky, Team Fight, Backline",
+    "Attributes":"Anti-CC, CC, Damage, Burst, Early Game, High Mobility, Initiator, Late Game, Pick Off, Poke, Single Target, Split Push, Sustain, Team Fight, Backline",
     "Damage Type":"Physical"
   },
   {
@@ -698,13 +698,13 @@
   {
     "Hero Name":"Lolita",
     "Roles":"Roamer, Support, Tank",
-    "Attributes":"CC, Early Game, Initiator, Late Game, Semi-Healer, Sustain, Tanky, Team Fight",
+    "Attributes":"CC, Early Game, Initiator, Late Game, Semi-Healer, Sustain, Team Fight",
     "Damage Type":"Physical"
   },
   {
     "Hero Name":"Minotaur",
     "Roles":"Roamer, Support, Tank",
-    "Attributes":"CC, Counter-Initiate, Early Game, Healer, Initiator, Late Game, Sustain, Tanky, Team Fight",
+    "Attributes":"CC, Counter-Initiate, Early Game, Healer, Initiator, Late Game, Sustain, Team Fight",
     "Damage Type":"Physical"
   },
   {
@@ -734,13 +734,13 @@
   {
     "Hero Name":"Akai",
     "Roles":"Exp Lane, Jungler, Roamer, Tank",
-    "Attributes":"Anti-CC, CC, Counter-Initiate, Early Game, Initiator, Late Game, Sustain, Tanky, Team Fight",
+    "Attributes":"Anti-CC, CC, Counter-Initiate, Early Game, Initiator, Late Game, Sustain, Team Fight",
     "Damage Type":"Physical"
   },
   {
     "Hero Name":"Alice",
     "Roles":"Exp Lane, Jungler, Tank, Mage",
-    "Attributes":"AoE, CC, Early Game, Late Game, Sustain, Tanky, Team Fight, Backline",
+    "Attributes":"AoE, CC, Early Game, Late Game, Sustain, Team Fight, Backline",
     "Damage Type":"Magic"
   },
   {
@@ -764,7 +764,7 @@
   {
     "Hero Name":"Balmond",
     "Roles":"Exp Lane, Fighter, Jungler, Tank",
-    "Attributes":"Burst, Damage-Sustain, Early Game, Late Game, Poke, Tanky, Team Fight",
+    "Attributes":"Burst, Damage-Sustain, Early Game, Late Game, Poke, Team Fight",
     "Damage Type":"Physical"
   },
   {
