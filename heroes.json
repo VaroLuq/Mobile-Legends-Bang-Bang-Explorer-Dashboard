@@ -398,7 +398,7 @@
   {
     "Hero Name":"Lunox",
     "Roles":"Gold Lane, Mage, Mid Lane",
-    "Attributes":"Anti-CC, Burst, Damage, Early Game, Late Game, Single Target, Team Fight",
+    "Attributes":"Anti-CC, Anti-Tank, Burst, Damage, Early Game, Late Game, Single Target, Team Fight",
     "Damage Type":"Magic"
   },
   {
@@ -536,7 +536,7 @@
   {
     "Hero Name":"Valir",
     "Roles":"Mage, Mid Lane",
-    "Attributes":"Anti-CC, AoE, CC, Damage-Sustain, Early Game, Late Game, Poke, Team Fight",
+    "Attributes":"Anti-CC, Anti-Tank, AoE, CC, Damage-Sustain, Early Game, Late Game, Poke, Team Fight",
     "Damage Type":"Magic"
   },
   {
