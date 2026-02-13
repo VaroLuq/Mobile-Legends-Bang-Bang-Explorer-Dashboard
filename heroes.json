@@ -176,7 +176,7 @@
   {
     "Hero Name":"Phoveus",
     "Roles":"Exp Lane, Fighter",
-    "Attributes":"Anti-CC, Anti-Tank, AoE, Burst, CC, Damage-Sustain, Early Game, Initiator, Late Game, Single Target, Team Fight",
+    "Attributes":"Anti-CC, Anti-Tank, AoE, Burst, CC, Damage-Sustain, Early Game, Initiator, Late Game, Single Target, Team Fight, Anti-Dash",
     "Damage Type":"Physical"
   },
   {
@@ -344,13 +344,13 @@
   {
     "Hero Name":"Minsitthar",
     "Roles":"Exp Lane, Fighter, Gold Lane, Roamer",
-    "Attributes":"Anti-Tank, AoE, Burst, CC, Counter-Initiate, Damage, Early Game, Initiator, Late Game, Poke, Team Fight",
+    "Attributes":"Anti-Tank, AoE, Burst, CC, Counter-Initiate, Damage, Early Game, Initiator, Late Game, Poke, Team Fight, Anti-Dash",
     "Damage Type":"Physical"
   },
   {
     "Hero Name":"Khufra",
     "Roles":"Roamer, Tank",
-    "Attributes":"AoE, CC, Early Game, Initiator, Late Game, Poke, Sustain, Tanky, Team Fight",
+    "Attributes":"AoE, CC, Early Game, Initiator, Late Game, Poke, Sustain, Tanky, Team Fight, Anti-Dash",
     "Damage Type":"Mixed"
   },
   {
