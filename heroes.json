@@ -68,7 +68,7 @@
   {
     "Hero Name":"Zetian",
     "Roles":"Mage, Mid Lane",
-    "Attributes":"AoE, Burst, CC, Counter-Initiate, Damage, Early Game, High Ground, Initiator, Late Game, Poke, Team Fight",
+    "Attributes":"AoE, Burst, CC, Counter-Initiate, Damage, Early Game, High Ground, Initiator, Late Game, Poke, Team Fight, Open Map",
     "Damage Type":"Magic"
   },
   {
@@ -302,7 +302,7 @@
   {
     "Hero Name":"Popol & Kupa",
     "Roles":"Gold Lane, Jungler, Marksman",
-    "Attributes":"Burst, CC, Damage, Early Game, Late Game, Single Target, Split Push, Team Fight",
+    "Attributes":"Burst, CC, Damage, Early Game, Late Game, Single Target, Split Push, Team Fight, Open Map",
     "Damage Type":"Physical"
   },
   {
@@ -404,7 +404,7 @@
   {
     "Hero Name":"Aldous",
     "Roles":"Exp Lane, Fighter",
-    "Attributes":"Burst, Damage-Sustain, Backline, Late Game, Single Target, Split Push",
+    "Attributes":"Burst, Damage-Sustain, Backline, Late Game, Single Target, Split Push, Open Map",
     "Damage Type":"Physical"
   },
   {
@@ -422,7 +422,7 @@
   {
     "Hero Name":"Selena",
     "Roles":"Mage, Mid Lane, Roamer",
-    "Attributes":"Burst, CC, Damage, Early Game, High Mobility, Late Game, Single Target, Team Fight",
+    "Attributes":"Burst, CC, Damage, Early Game, High Mobility, Late Game, Single Target, Team Fight, Open Map",
     "Damage Type":"Magic"
   },
   {
@@ -638,7 +638,7 @@
   {
     "Hero Name":"Yi Sun-shin",
     "Roles":"Assassin, Jungler",
-    "Attributes":"Anti-CC, AoE, Burst, CC, Damage, Early Game, High Mobility, Late Game, Poke, Single Target, Split Push, Team Fight",
+    "Attributes":"Anti-CC, AoE, Burst, CC, Damage, Early Game, High Mobility, Late Game, Poke, Single Target, Split Push, Team Fight, Open Map",
     "Damage Type":"Physical"
   },
   {
