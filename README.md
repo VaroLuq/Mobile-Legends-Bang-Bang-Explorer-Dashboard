@@ -1,6 +1,6 @@
 # 🧠 Mobile Legends Hero Explorer Dashboard
 
-A minimalistic, cyberpunk-themed web application for exploring and filtering Mobile Legends: Bang Bang heroes based on roles, attributes, and damage types.
+A web application for exploring and filtering Mobile Legends: Bang Bang heroes based on roles, attributes, and damage types.
 
 This project was built as a lightweight personal knowledge base and hero analysis tool, inspired by MOBA drafting strategies and game analytics dashboards.
 
