@@ -10,9 +10,6 @@ This project was built as a lightweight personal knowledge base and hero analysi
 
 - 🔍 Real-time hero search
 - ✅ Checkbox-based filtering (Roles, Attributes, Damage Type)
-- 🧊 Glassmorphism cyberpunk UI with neon chips
-- 🌀 Animated background gradients and scanlines
-- 🎮 Smooth hero card grid transitions
 - 📂 Fully static — runs in a single HTML file (no backend)
 
 ---
