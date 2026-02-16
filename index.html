@@ -451,6 +451,11 @@ input[type="checkbox"] {
   </div>
 
   <div class="group">
+    <div class="group-title">Lanes</div>
+    <div id="lanes" class="filters"></div>
+  </div>
+
+  <div class="group">
     <div class="group-title">Attributes</div>
     <div id="attributes" class="filters"></div>
   </div>
@@ -540,6 +545,7 @@ async function loadHeroes() {
     // Pre-process hero data for faster filtering
     heroes.forEach(h => {
       h._roles = h.Roles?.split(",").map(x => x.trim()) || [];
+      h._lanes = h.Lanes?.split(",").map(x => x.trim()) || [];
       h._attrs = h.Attributes?.split(",").map(x => x.trim()) || [];
       h._dmg = h["Damage Type"]?.trim() || "";
       h._nameLower = h["Hero Name"]?.toLowerCase() || "";
@@ -549,6 +555,7 @@ async function loadHeroes() {
     
     // Build UI
     buildCheckboxes("roles", getUnique("Roles"));
+    buildCheckboxes("lanes", getUnique("Lanes"));
     buildCheckboxes("attributes", getUnique("Attributes"));
     buildCheckboxes("damage", getUnique("Damage Type"));
     
@@ -626,6 +633,7 @@ function createHeroCard(hero) {
     <div class="hero-name">${hero["Hero Name"]}</div>
     <div class="hero-meta">
       ${createMetaSection("Roles", hero._roles)}
+      ${createMetaSection("Lanes", hero._lanes)}
       ${createMetaSection("Attributes", hero._attrs)}
       ${createMetaSection("Damage", [hero._dmg])}
     </div>
@@ -668,6 +676,7 @@ function getChecked(id) {
 function update() {
   const searchQuery = document.getElementById("search").value.toLowerCase();
   const selectedRoles = getChecked("roles");
+  const selectedLanes = getChecked("lanes");
   const selectedAttrs = getChecked("attributes");
   const selectedDmg = getChecked("damage");
   
@@ -678,6 +687,9 @@ function update() {
     
     // Role filter (ALL selected roles must match)
     if (selectedRoles.length > 0 && !selectedRoles.every(r => hero._roles.includes(r))) return false;
+
+    // Lanes filter (ALL selected lanes must match)
+    if (selectedLanes.length > 0 && !selectedLanes.every(l => hero._lanes.includes(l))) return false;
     
     // Attribute filter (ALL selected attributes must match)
     if (selectedAttrs.length > 0 && !selectedAttrs.every(a => hero._attrs.includes(a))) return false;

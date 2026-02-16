@@ -1,788 +1,919 @@
 [
   {
-    "Hero Name":"Tigreal",
-    "Roles":"Roamer, Tank",
-    "Attributes":"AoE, CC, Initiator, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Tigreal",
+    "Roles": "Tank",
+    "Attributes": "AoE, CC, Initiator, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Roamer"
   },
   {
-    "Hero Name":"Fanny",
-    "Roles":"Assassin, Jungler",
-    "Attributes":"Burst, Damage, Backline, Early Game, High Mobility, Late Game, Split Push, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Fanny",
+    "Roles": "Assassin",
+    "Attributes": "Burst, Damage, Backline, Early Game, High Mobility, Late Game, Split Push, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Jungler"
   },
   {
-    "Hero Name":"Pharsa",
-    "Roles":"Mage, Mid Lane",
-    "Attributes":"AoE, Burst, CC, Damage, Early Game, High Ground, High Mobility, Late Game, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Pharsa",
+    "Roles": "Mage",
+    "Attributes": "AoE, Burst, CC, Damage, Early Game, High Ground, High Mobility, Late Game, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Mid Lane"
   },
   {
-    "Hero Name":"Sora",
-    "Roles":"Exp Lane, Fighter, Gold Lane, Roamer, Assassin",
-    "Attributes":"Anti-CC, AoE, Burst, CC, Damage-Sustain, Early Game, High Mobility, Initiator, Late Game, Single Target, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Sora",
+    "Roles": "Fighter, Assassin",
+    "Attributes": "Anti-CC, AoE, Burst, CC, Damage-Sustain, Early Game, High Mobility, Initiator, Late Game, Single Target, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Gold Lane, Roamer"
   },
   {
-    "Hero Name":"Obsidia",
-    "Roles":"Gold Lane, Marksman",
-    "Attributes":"Burst, CC, Damage, Late Game, Single Target, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Obsidia",
+    "Roles": "Marksman",
+    "Attributes": "Burst, CC, Damage, Late Game, Single Target, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Gold Lane"
   },
   {
-    "Hero Name":"Kalea",
-    "Roles":"Roamer, Tank",
-    "Attributes":"CC, Early Game, Initiator, Late Game, Pick Off, Semi-Healer, Single Target, Sustain, Team Fight, Backline",
-    "Damage Type":"Physical"
+    "Hero Name": "Kalea",
+    "Roles": "Tank",
+    "Attributes": "CC, Early Game, Initiator, Late Game, Pick Off, Semi-Healer, Single Target, Sustain, Team Fight, Backline",
+    "Damage Type": "Physical",
+    "Lanes": "Roamer"
   },
   {
-    "Hero Name":"Lukas",
-    "Roles":"Exp Lane, Fighter, Jungler",
-    "Attributes":"Anti-CC, AoE, Burst, CC, Damage-Sustain, Early Game, Initiator, Late Game, Single Target, Team Fight, Backline",
-    "Damage Type":"Physical"
+    "Hero Name": "Lukas",
+    "Roles": "Fighter",
+    "Attributes": "Anti-CC, AoE, Burst, CC, Damage-Sustain, Early Game, Initiator, Late Game, Single Target, Team Fight, Backline",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Jungler"
   },
   {
-    "Hero Name":"Cici",
-    "Roles":"Exp Lane, Fighter, Gold Lane",
-    "Attributes":"Anti-Tank, Damage-Sustain, Early Game, High Mobility, Initiator, Late Game, Poke, Single Target, Team Fight, Backline",
-    "Damage Type":"Physical"
+    "Hero Name": "Cici",
+    "Roles": "Fighter",
+    "Attributes": "Anti-Tank, Damage-Sustain, Early Game, High Mobility, Initiator, Late Game, Poke, Single Target, Team Fight, Backline",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Gold Lane"
   },
   {
-    "Hero Name":"Suyou",
-    "Roles":"Assassin, Jungler",
-    "Attributes":"Anti-CC, AoE, Burst, CC, Damage, Early Game, High Mobility, Late Game, Single Target, Split Push, Team Fight, Backline",
-    "Damage Type":"Physical"
+    "Hero Name": "Suyou",
+    "Roles": "Assassin",
+    "Attributes": "Anti-CC, AoE, Burst, CC, Damage, Early Game, High Mobility, Late Game, Single Target, Split Push, Team Fight, Backline",
+    "Damage Type": "Physical",
+    "Lanes": "Jungler"
   },
   {
-    "Hero Name":"Nolan",
-    "Roles":"Assassin, Jungler",
-    "Attributes":"Burst, Damage, Early Game, High Mobility, Late Game, Single Target, Split Push, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Nolan",
+    "Roles": "Assassin",
+    "Attributes": "Burst, Damage, Early Game, High Mobility, Late Game, Single Target, Split Push, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Jungler"
   },
   {
-    "Hero Name":"Chip",
-    "Roles":"Roamer, Tank",
-    "Attributes":"AoE, CC, Counter-Initiate, Early Game, High Mobility, Initiator, Late Game, Pick Off, Split Push, Sustain, Team Fight, Backline",
-    "Damage Type":"Magic"
+    "Hero Name": "Chip",
+    "Roles": "Tank",
+    "Attributes": "AoE, CC, Counter-Initiate, Early Game, High Mobility, Initiator, Late Game, Pick Off, Split Push, Sustain, Team Fight, Backline",
+    "Damage Type": "Magic",
+    "Lanes": "Roamer"
   },
   {
-    "Hero Name":"Zetian",
-    "Roles":"Mage, Mid Lane",
-    "Attributes":"AoE, Burst, CC, Counter-Initiate, Damage, Early Game, High Ground, Initiator, Late Game, Poke, Team Fight, Open Map",
-    "Damage Type":"Magic"
+    "Hero Name": "Zetian",
+    "Roles": "Mage",
+    "Attributes": "AoE, Burst, CC, Counter-Initiate, Damage, Early Game, High Ground, Initiator, Late Game, Poke, Team Fight, Open Map",
+    "Damage Type": "Magic",
+    "Lanes": "Mid Lane"
   },
   {
-    "Hero Name":"Zhuxin",
-    "Roles":"Mage, Mid Lane",
-    "Attributes":"Anti-Tank, AoE, CC, Damage-Sustain, Early Game, Late Game, Poke, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Zhuxin",
+    "Roles": "Mage",
+    "Attributes": "Anti-Tank, AoE, CC, Damage-Sustain, Early Game, Late Game, Poke, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Mid Lane"
   },
   {
-    "Hero Name":"Ixia",
-    "Roles":"Gold Lane, Marksman",
-    "Attributes":"AoE, Burst, CC, Damage, Early Game, High Ground, Late Game, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Ixia",
+    "Roles": "Marksman",
+    "Attributes": "AoE, Burst, CC, Damage, Early Game, High Ground, Late Game, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Gold Lane"
   },
   {
-    "Hero Name":"Fredrinn",
-    "Roles":"Exp Lane, Fighter, Jungler, Tank",
-    "Attributes":"AoE, Burst, CC, Early Game, High Mobility, Initiator, Late Game, Sustain, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Fredrinn",
+    "Roles": "Fighter, Tank",
+    "Attributes": "AoE, Burst, CC, Early Game, High Mobility, Initiator, Late Game, Sustain, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Jungler"
   },
   {
-    "Hero Name":"Xavier",
-    "Roles":"Mage, Mid Lane",
-    "Attributes":"AoE, Burst, CC, Damage, Early Game, High Ground, Late Game, Poke, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Xavier",
+    "Roles": "Mage",
+    "Attributes": "AoE, Burst, CC, Damage, Early Game, High Ground, Late Game, Poke, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Mid Lane"
   },
   {
-    "Hero Name":"Melissa",
-    "Roles":"Gold Lane, Marksman",
-    "Attributes":"Anti-Tank, AoE, CC, Counter-Initiate, Damage, Late Game, Poke, Single Target, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Melissa",
+    "Roles": "Marksman",
+    "Attributes": "Anti-Tank, AoE, CC, Counter-Initiate, Damage, Late Game, Poke, Single Target, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Gold Lane"
   },
   {
-    "Hero Name":"Joy",
-    "Roles":"Assassin, Exp Lane, Jungler",
-    "Attributes":"Anti-CC, AoE, Burst, Damage, Early Game, High Mobility, Initiator, Late Game, Team Fight, Backline",
-    "Damage Type":"Magic"
+    "Hero Name": "Joy",
+    "Roles": "Assassin",
+    "Attributes": "Anti-CC, AoE, Burst, Damage, Early Game, High Mobility, Initiator, Late Game, Team Fight, Backline",
+    "Damage Type": "Magic",
+    "Lanes": "Exp Lane, Jungler"
   },
   {
-    "Hero Name":"Novaria",
-    "Roles":"Mage, Mid Lane",
-    "Attributes":"Burst, Damage, Early Game, High Mobility, Late Game, Single Target, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Novaria",
+    "Roles": "Mage",
+    "Attributes": "Burst, Damage, Early Game, High Mobility, Late Game, Single Target, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Mid Lane"
   },
   {
-    "Hero Name":"Arlott",
-    "Roles":"Exp Lane, Fighter, Roamer, Assassin",
-    "Attributes":"AoE, Burst, CC, Damage-Sustain, Early Game, High Mobility, Initiator, Late Game, Single Target, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Arlott",
+    "Roles": "Fighter, Assassin",
+    "Attributes": "AoE, Burst, CC, Damage-Sustain, Early Game, High Mobility, Initiator, Late Game, Single Target, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Roamer"
   },
   {
-    "Hero Name":"Yin",
-    "Roles":"Assassin, Exp Lane, Fighter, Gold Lane, Jungler",
-    "Attributes":"Burst, CC, Damage, Early Game, Late Game, Single Target, Split Push, Team Fight, Pick Off",
-    "Damage Type":"Physical"
+    "Hero Name": "Yin",
+    "Roles": "Assassin, Fighter",
+    "Attributes": "Burst, CC, Damage, Early Game, Late Game, Single Target, Split Push, Team Fight, Pick Off",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Gold Lane, Jungler"
   },
   {
-    "Hero Name":"Floryn",
-    "Roles":"Roamer, Support",
-    "Attributes":"Early Game, Healer, Late Game, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Floryn",
+    "Roles": "Support",
+    "Attributes": "Early Game, Healer, Late Game, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Roamer"
   },
   {
-    "Hero Name":"Julian",
-    "Roles":"Exp Lane, Fighter, Jungler",
-    "Attributes":"Anti-CC, AoE, Burst, Damage, Early Game, Late Game, Single Target, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Julian",
+    "Roles": "Fighter",
+    "Attributes": "Anti-CC, AoE, Burst, Damage, Early Game, Late Game, Single Target, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Exp Lane, Jungler"
   },
   {
-    "Hero Name":"Aamon",
-    "Roles":"Assassin, Jungler",
-    "Attributes":"Burst, Damage, Early Game, High Mobility, Late Game, Single Target, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Aamon",
+    "Roles": "Assassin",
+    "Attributes": "Burst, Damage, Early Game, High Mobility, Late Game, Single Target, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Jungler"
   },
   {
-    "Hero Name":"Natan",
-    "Roles":"Gold Lane, Marksman",
-    "Attributes":"Anti-Tank, AoE, Burst, CC, Damage, Early Game, Late Game, Single Target, Team Fight, High Ground",
-    "Damage Type":"Magic"
+    "Hero Name": "Natan",
+    "Roles": "Marksman",
+    "Attributes": "Anti-Tank, AoE, Burst, CC, Damage, Early Game, Late Game, Single Target, Team Fight, High Ground",
+    "Damage Type": "Magic",
+    "Lanes": "Gold Lane"
   },
   {
-    "Hero Name":"Edith",
-    "Roles":"Exp Lane, Marksman, Roamer, Tank",
-    "Attributes":"Anti-Tank, AoE, Burst, CC, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Single Target, Sustain, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Edith",
+    "Roles": "Marksman, Tank",
+    "Attributes": "Anti-Tank, AoE, Burst, CC, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Single Target, Sustain, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Exp Lane, Roamer"
   },
   {
-    "Hero Name":"Aulus",
-    "Roles":"Fighter, Jungler",
-    "Attributes":"Anti-Tank, AoE, Burst, Damage, Damage-Sustain, Late Game, Poke, Single Target, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Aulus",
+    "Roles": "Fighter",
+    "Attributes": "Anti-Tank, AoE, Burst, Damage, Damage-Sustain, Late Game, Poke, Single Target, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Jungler"
   },
   {
-    "Hero Name":"Valentina",
-    "Roles":"Exp Lane, Mage, Mid Lane",
-    "Attributes":"AoE, Burst, CC, Counter-Initiate, Damage, Damage-Sustain, Early Game, High Mobility, Initiator, Late Game, Poke, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Valentina",
+    "Roles": "Mage",
+    "Attributes": "AoE, Burst, CC, Counter-Initiate, Damage, Damage-Sustain, Early Game, High Mobility, Initiator, Late Game, Poke, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Exp Lane, Mid Lane"
   },
   {
-    "Hero Name":"Beatrix",
-    "Roles":"Gold Lane, Marksman",
-    "Attributes":"Anti-Tank, AoE, Burst, Damage, Early Game, High Ground, Late Game, Poke, Single Target, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Beatrix",
+    "Roles": "Marksman",
+    "Attributes": "Anti-Tank, AoE, Burst, Damage, Early Game, High Ground, Late Game, Poke, Single Target, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Gold Lane"
   },
   {
-    "Hero Name":"Phoveus",
-    "Roles":"Exp Lane, Fighter",
-    "Attributes":"Anti-CC, Anti-Tank, AoE, Burst, CC, Damage-Sustain, Early Game, Initiator, Late Game, Single Target, Team Fight, Anti-Dash",
-    "Damage Type":"Physical"
+    "Hero Name": "Phoveus",
+    "Roles": "Fighter",
+    "Attributes": "Anti-CC, Anti-Tank, AoE, Burst, CC, Damage-Sustain, Early Game, Initiator, Late Game, Single Target, Team Fight, Anti-Dash",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane"
   },
   {
-    "Hero Name":"Paquito",
-    "Roles":"Assassin, Exp Lane, Fighter, Gold Lane, Jungler",
-    "Attributes":"AoE, Burst, CC, Damage, Damage-Sustain, Early Game, High Mobility, Late Game, Single Target, Split Push, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Paquito",
+    "Roles": "Assassin, Fighter",
+    "Attributes": "AoE, Burst, CC, Damage, Damage-Sustain, Early Game, High Mobility, Late Game, Single Target, Split Push, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Gold Lane, Jungler"
   },
   {
-    "Hero Name":"Gloo",
-    "Roles":"Exp Lane, Roamer, Tank",
-    "Attributes":"CC, Damage-Sustain, Early Game, Late Game, Poke, Single Target, Sustain, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Gloo",
+    "Roles": "Tank",
+    "Attributes": "CC, Damage-Sustain, Early Game, Late Game, Poke, Single Target, Sustain, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Exp Lane, Roamer"
   },
   {
-    "Hero Name":"Mathilda",
-    "Roles":"Roamer, Support, Assassin",
-    "Attributes":"Damage-Sustain, Backline, Early Game, Semi-Healer, High Mobility, Initiator, Late Game, Poke, Single Target, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Mathilda",
+    "Roles": "Support, Assassin",
+    "Attributes": "Damage-Sustain, Backline, Early Game, Semi-Healer, High Mobility, Initiator, Late Game, Poke, Single Target, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Roamer"
   },
   {
-    "Hero Name":"Cecilion",
-    "Roles":"Mage, Mid Lane",
-    "Attributes":"AoE, Burst, CC, Damage, High Ground, Late Game, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Cecilion",
+    "Roles": "Mage",
+    "Attributes": "AoE, Burst, CC, Damage, High Ground, Late Game, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Mid Lane"
   },
   {
-    "Hero Name":"Wanwan",
-    "Roles":"Gold Lane, Marksman",
-    "Attributes":"Anti-CC, Anti-Tank, Burst, Damage, Early Game, High Mobility, Late Game, Poke, Single Target, Split Push, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Wanwan",
+    "Roles": "Marksman",
+    "Attributes": "Anti-CC, Anti-Tank, Burst, Damage, Early Game, High Mobility, Late Game, Poke, Single Target, Split Push, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Gold Lane"
   },
   {
-    "Hero Name":"Silvanna",
-    "Roles":"Exp Lane, Fighter, Gold Lane, Jungler, Roamer",
-    "Attributes":"CC, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Single Target, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Silvanna",
+    "Roles": "Fighter",
+    "Attributes": "CC, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Single Target, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Exp Lane, Gold Lane, Jungler, Roamer"
   },
   {
-    "Hero Name":"Baxia",
-    "Roles":"Exp Lane, Jungler, Roamer, Tank",
-    "Attributes":"Anti-Tank, CC, Early Game, Backline, High Mobility, Initiator, Late Game, Poke, Single Target, Sustain, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Baxia",
+    "Roles": "Tank",
+    "Attributes": "Anti-Tank, CC, Early Game, Backline, High Mobility, Initiator, Late Game, Poke, Single Target, Sustain, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Exp Lane, Jungler, Roamer"
   },
   {
-    "Hero Name":"Masha",
-    "Roles":"Exp Lane, Fighter, Gold Lane, Roamer",
-    "Attributes":"Anti-CC, Burst, Damage, Backline, Early Game, High Mobility, Late Game, Single Target, Split Push, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Masha",
+    "Roles": "Fighter",
+    "Attributes": "Anti-CC, Burst, Damage, Backline, Early Game, High Mobility, Late Game, Single Target, Split Push, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Gold Lane, Roamer"
   },
   {
-    "Hero Name":"X.Borg",
-    "Roles":"Exp Lane, Fighter, Gold Lane, Jungler",
-    "Attributes":"Anti-CC, Anti-Tank, AoE, Burst, Damage-Sustain, Early Game, High Ground, Initiator, Late Game, Poke, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "X.Borg",
+    "Roles": "Fighter",
+    "Attributes": "Anti-CC, Anti-Tank, AoE, Burst, Damage-Sustain, Early Game, High Ground, Initiator, Late Game, Poke, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Gold Lane, Jungler"
   },
   {
-    "Hero Name":"Lylia",
-    "Roles":"Mage, Mid Lane",
-    "Attributes":"AoE, CC, Damage, Early Game, Late Game, Poke, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Lylia",
+    "Roles": "Mage",
+    "Attributes": "AoE, CC, Damage, Early Game, Late Game, Poke, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Mid Lane"
   },
   {
-    "Hero Name":"Ling",
-    "Roles":"Assassin, Jungler",
-    "Attributes":"Anti-CC, AoE, Burst, CC, Backline, Damage, Early Game, High Mobility, Late Game, Single Target, Split Push, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Ling",
+    "Roles": "Assassin",
+    "Attributes": "Anti-CC, AoE, Burst, CC, Backline, Damage, Early Game, High Mobility, Late Game, Single Target, Split Push, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Jungler"
   },
   {
-    "Hero Name":"Dyrroth",
-    "Roles":"Exp Lane, Fighter, Jungler",
-    "Attributes":"Anti-Tank, AoE, Burst, Damage-Sustain, Early Game, Late Game, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Dyrroth",
+    "Roles": "Fighter",
+    "Attributes": "Anti-Tank, AoE, Burst, Damage-Sustain, Early Game, Late Game, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Jungler"
   },
   {
-    "Hero Name":"Terizla",
-    "Roles":"Exp Lane, Fighter, Roamer, Tank",
-    "Attributes":"AoE, Burst, CC, Counter-Initiate, Damage-Sustain, Early Game, Initiator, Late Game, Sustain, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Terizla",
+    "Roles": "Fighter, Tank",
+    "Attributes": "AoE, Burst, CC, Counter-Initiate, Damage-Sustain, Early Game, Initiator, Late Game, Sustain, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Roamer"
   },
   {
-    "Hero Name":"Yve",
-    "Roles":"Mage, Mid Lane",
-    "Attributes":"AoE, Anti-Tank, CC, Damage, Early Game, High Ground, Late Game, Poke, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Yve",
+    "Roles": "Mage",
+    "Attributes": "AoE, Anti-Tank, CC, Damage, Early Game, High Ground, Late Game, Poke, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Mid Lane"
   },
   {
-    "Hero Name":"Atlas",
-    "Roles":"Roamer, Tank",
-    "Attributes":"AoE, CC, Early Game, Backline, High Mobility, Initiator, Late Game, Sustain, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Atlas",
+    "Roles": "Tank",
+    "Attributes": "AoE, CC, Early Game, Backline, High Mobility, Initiator, Late Game, Sustain, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Roamer"
   },
   {
-    "Hero Name":"Barats",
-    "Roles":"Exp Lane, Fighter, Jungler, Tank",
-    "Attributes":"AoE, CC, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Sustain, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Barats",
+    "Roles": "Fighter, Tank",
+    "Attributes": "AoE, CC, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Sustain, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Jungler"
   },
   {
-    "Hero Name":"Khaleed",
-    "Roles":"Exp Lane, Fighter, Roamer",
-    "Attributes":"AoE, Burst, CC, Damage-Sustain, Early Game, High Mobility, Initiator, Late Game, Sustain, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Khaleed",
+    "Roles": "Fighter",
+    "Attributes": "AoE, Burst, CC, Damage-Sustain, Early Game, High Mobility, Initiator, Late Game, Sustain, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Roamer"
   },
   {
-    "Hero Name":"Brody",
-    "Roles":"Marksman, Mid Lane",
-    "Attributes":"Burst, CC, Damage, Early Game, Late Game, Single Target, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Brody",
+    "Roles": "Marksman",
+    "Attributes": "Burst, CC, Damage, Early Game, Late Game, Single Target, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Mid Lane"
   },
   {
-    "Hero Name":"Luo Yi",
-    "Roles":"Mage, Mid Lane",
-    "Attributes":"AoE, Burst, CC, Damage, Early Game, High Ground, Late Game, Split Push, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Luo Yi",
+    "Roles": "Mage",
+    "Attributes": "AoE, Burst, CC, Damage, Early Game, High Ground, Late Game, Split Push, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Mid Lane"
   },
   {
-    "Hero Name":"Benedetta",
-    "Roles":"Assassin, Exp Lane, Gold Lane",
-    "Attributes":"Anti-CC, AoE, Burst, Damage, Backline, Early Game, High Mobility, Initiator, Late Game, Split Push, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Benedetta",
+    "Roles": "Assassin",
+    "Attributes": "Anti-CC, AoE, Burst, Damage, Backline, Early Game, High Mobility, Initiator, Late Game, Split Push, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Gold Lane"
   },
   {
-    "Hero Name":"Popol & Kupa",
-    "Roles":"Gold Lane, Jungler, Marksman",
-    "Attributes":"Burst, CC, Damage, Early Game, Late Game, Single Target, Split Push, Team Fight, Open Map",
-    "Damage Type":"Physical"
+    "Hero Name": "Popol & Kupa",
+    "Roles": "Marksman",
+    "Attributes": "Burst, CC, Damage, Early Game, Late Game, Single Target, Split Push, Team Fight, Open Map",
+    "Damage Type": "Physical",
+    "Lanes": "Gold Lane, Jungler"
   },
   {
-    "Hero Name":"Yu Zhong",
-    "Roles":"Exp Lane, Fighter",
-    "Attributes":"Anti-CC, AoE, Backline, Burst, CC, Damage-Sustain, Early Game, Initiator, Late Game, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Yu Zhong",
+    "Roles": "Fighter",
+    "Attributes": "Anti-CC, AoE, Backline, Burst, CC, Damage-Sustain, Early Game, Initiator, Late Game, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane"
   },
   {
-    "Hero Name":"Carmilla",
-    "Roles":"Jungler, Roamer, Support, Tank",
-    "Attributes":"AoE, CC, Counter-Initiate, Early Game, Initiator, Late Game, Sustain, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Carmilla",
+    "Roles": "Support, Tank",
+    "Attributes": "AoE, CC, Counter-Initiate, Early Game, Initiator, Late Game, Sustain, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Jungler, Roamer"
   },
   {
-    "Hero Name":"Esmeralda",
-    "Roles":"Exp Lane, Mage, Gold Lane, Tank",
-    "Attributes":"AoE, CC, Early Game, Initiator, Late Game, Poke, Sustain, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Esmeralda",
+    "Roles": "Mage, Tank",
+    "Attributes": "AoE, CC, Early Game, Initiator, Late Game, Poke, Sustain, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Exp Lane, Gold Lane"
   },
   {
-    "Hero Name":"Guinevere",
-    "Roles":"Exp Lane, Fighter, Gold Lane, Jungler, Roamer",
-    "Attributes":"Anti-CC, AoE, CC, Damage-Sustain, Early Game, High Mobility, Initiator, Late Game, Poke, Team Fight, Backline",
-    "Damage Type":"Magic"
+    "Hero Name": "Guinevere",
+    "Roles": "Fighter",
+    "Attributes": "Anti-CC, AoE, CC, Damage-Sustain, Early Game, High Mobility, Initiator, Late Game, Poke, Team Fight, Backline",
+    "Damage Type": "Magic",
+    "Lanes": "Exp Lane, Gold Lane, Jungler, Roamer"
   },
   {
-    "Hero Name":"Faramis",
-    "Roles":"Mage, Mid Lane",
-    "Attributes":"AoE, CC, Counter-Initiate, Damage, Early Game, High Mobility, Late Game, Poke, Semi-Healer, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Faramis",
+    "Roles": "Mage",
+    "Attributes": "AoE, CC, Counter-Initiate, Damage, Early Game, High Mobility, Late Game, Poke, Semi-Healer, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Mid Lane"
   },
   {
-    "Hero Name":"Granger",
-    "Roles":"Gold Lane, Marksman",
-    "Attributes":"Burst, Damage, Early Game, High Mobility, Late Game, Single Target, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Granger",
+    "Roles": "Marksman",
+    "Attributes": "Burst, Damage, Early Game, High Mobility, Late Game, Single Target, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Gold Lane"
   },
   {
-    "Hero Name":"Minsitthar",
-    "Roles":"Exp Lane, Fighter, Gold Lane, Roamer",
-    "Attributes":"Anti-Tank, AoE, Burst, CC, Counter-Initiate, Damage, Early Game, Initiator, Late Game, Poke, Team Fight, Anti-Dash",
-    "Damage Type":"Physical"
+    "Hero Name": "Minsitthar",
+    "Roles": "Fighter",
+    "Attributes": "Anti-Tank, AoE, Burst, CC, Counter-Initiate, Damage, Early Game, Initiator, Late Game, Poke, Team Fight, Anti-Dash",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Gold Lane, Roamer"
   },
   {
-    "Hero Name":"Khufra",
-    "Roles":"Roamer, Tank",
-    "Attributes":"AoE, CC, Early Game, Initiator, Late Game, Poke, Sustain, Team Fight, Anti-Dash",
-    "Damage Type":"Mixed"
+    "Hero Name": "Khufra",
+    "Roles": "Tank",
+    "Attributes": "AoE, CC, Early Game, Initiator, Late Game, Poke, Sustain, Team Fight, Anti-Dash",
+    "Damage Type": "Mixed",
+    "Lanes": "Roamer"
   },
   {
-    "Hero Name":"Badang",
-    "Roles":"Exp Lane, Fighter, Roamer",
-    "Attributes":"AoE, Burst, CC, Damage, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Badang",
+    "Roles": "Fighter",
+    "Attributes": "AoE, Burst, CC, Damage, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Roamer"
   },
   {
-    "Hero Name":"Harith",
-    "Roles":"Gold Lane, Mage",
-    "Attributes":"Burst, Damage-Sustain, Early Game, High Mobility, Late Game, Single Target, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Harith",
+    "Roles": "Mage",
+    "Attributes": "Burst, Damage-Sustain, Early Game, High Mobility, Late Game, Single Target, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Gold Lane"
   },
   {
-    "Hero Name":"Thamuz",
-    "Roles":"Exp Lane, Fighter, Jungler",
-    "Attributes":"Anti-Tank, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Single Target, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Thamuz",
+    "Roles": "Fighter",
+    "Attributes": "Anti-Tank, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Single Target, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Jungler"
   },
   {
-    "Hero Name":"Kadita",
-    "Roles":"Assassin, Mage, Mid Lane, Roamer",
-    "Attributes":"Anti-CC, Burst, CC, Damage, Early Game, High Mobility, Initiator, Late Game, Single Target, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Kadita",
+    "Roles": "Assassin, Mage",
+    "Attributes": "Anti-CC, Burst, CC, Damage, Early Game, High Mobility, Initiator, Late Game, Single Target, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Mid Lane, Roamer"
   },
   {
-    "Hero Name":"Hanzo",
-    "Roles":"Assassin, Jungler",
-    "Attributes":"Anti-CC, Anti-Tank, Burst, Damage, Backline, Early Game, High Mobility, Late Game, Single Target, Split Push, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Hanzo",
+    "Roles": "Assassin",
+    "Attributes": "Anti-CC, Anti-Tank, Burst, Damage, Backline, Early Game, High Mobility, Late Game, Single Target, Split Push, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Jungler"
   },
   {
-    "Hero Name":"Kimmy",
-    "Roles":"Jungler, Mage, Marksman, Mid Lane",
-    "Attributes":"CC, Damage, Early Game, Late Game, Poke, Single Target, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Kimmy",
+    "Roles": "Mage, Marksman",
+    "Attributes": "CC, Damage, Early Game, Late Game, Poke, Single Target, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Jungler, Mid Lane"
   },
   {
-    "Hero Name":"Belerick",
-    "Roles":"Exp Lane, Roamer, Tank",
-    "Attributes":"AoE, CC, Counter-Initiate, Early Game, Late Game, Poke, Sustain, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Belerick",
+    "Roles": "Tank",
+    "Attributes": "AoE, CC, Counter-Initiate, Early Game, Late Game, Poke, Sustain, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Exp Lane, Roamer"
   },
   {
-    "Hero Name":"Lunox",
-    "Roles":"Gold Lane, Mage, Mid Lane",
-    "Attributes":"Anti-CC, Anti-Tank, Burst, Damage, Early Game, Late Game, Single Target, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Lunox",
+    "Roles": "Mage",
+    "Attributes": "Anti-CC, Anti-Tank, Burst, Damage, Early Game, Late Game, Single Target, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Gold Lane, Mid Lane"
   },
   {
-    "Hero Name":"Aldous",
-    "Roles":"Exp Lane, Fighter",
-    "Attributes":"Burst, Damage-Sustain, Backline, Late Game, Single Target, Split Push, Open Map",
-    "Damage Type":"Physical"
+    "Hero Name": "Aldous",
+    "Roles": "Fighter",
+    "Attributes": "Burst, Damage-Sustain, Backline, Late Game, Single Target, Split Push, Open Map",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane"
   },
   {
-    "Hero Name":"Claude",
-    "Roles":"Gold Lane, Marksman",
-    "Attributes":"Anti-Tank, AoE, Burst, Damage-Sustain, High Mobility, Late Game, Poke, Split Push, Team Fight, Backline",
-    "Damage Type":"Physical"
+    "Hero Name": "Claude",
+    "Roles": "Marksman",
+    "Attributes": "Anti-Tank, AoE, Burst, Damage-Sustain, High Mobility, Late Game, Poke, Split Push, Team Fight, Backline",
+    "Damage Type": "Physical",
+    "Lanes": "Gold Lane"
   },
   {
-    "Hero Name":"Leomord",
-    "Roles":"Exp Lane, Fighter, Jungler",
-    "Attributes":"AoE, Burst, Backline, Damage-Sustain, Early Game, High Mobility, Initiator, Late Game, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Leomord",
+    "Roles": "Fighter",
+    "Attributes": "AoE, Burst, Backline, Damage-Sustain, Early Game, High Mobility, Initiator, Late Game, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Jungler"
   },
   {
-    "Hero Name":"Selena",
-    "Roles":"Mage, Mid Lane, Roamer",
-    "Attributes":"Burst, CC, Damage, Early Game, High Mobility, Late Game, Single Target, Team Fight, Open Map",
-    "Damage Type":"Magic"
+    "Hero Name": "Selena",
+    "Roles": "Mage",
+    "Attributes": "Burst, CC, Damage, Early Game, High Mobility, Late Game, Single Target, Team Fight, Open Map",
+    "Damage Type": "Magic",
+    "Lanes": "Mid Lane, Roamer"
   },
   {
-    "Hero Name":"Kaja",
-    "Roles":"Roamer, Support, Tank",
-    "Attributes":"CC, Early Game, Initiator, Late Game, Pick Off, Single Target, Sustain, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Kaja",
+    "Roles": "Support, Tank",
+    "Attributes": "CC, Early Game, Initiator, Late Game, Pick Off, Single Target, Sustain, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Roamer"
   },
   {
-    "Hero Name":"Vale",
-    "Roles":"Mage, Mid Lane",
-    "Attributes":"AoE, Burst, CC, Damage, Early Game, High Ground, Late Game, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Vale",
+    "Roles": "Mage",
+    "Attributes": "AoE, Burst, CC, Damage, Early Game, High Ground, Late Game, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Mid Lane"
   },
   {
-    "Hero Name":"Helcurt",
-    "Roles":"Assassin, Jungler, Roamer",
-    "Attributes":"Burst, CC, Counter-Initiate, Damage, Early Game, High Mobility, Initiator, Late Game, Single Target, Split Push, Team Fight, Backline",
-    "Damage Type":"Physical"
+    "Hero Name": "Helcurt",
+    "Roles": "Assassin",
+    "Attributes": "Burst, CC, Counter-Initiate, Damage, Early Game, High Mobility, Initiator, Late Game, Single Target, Split Push, Team Fight, Backline",
+    "Damage Type": "Physical",
+    "Lanes": "Jungler, Roamer"
   },
   {
-    "Hero Name":"Irithel",
-    "Roles":"Gold Lane, Marksman",
-    "Attributes":"Burst, Damage, Early Game, High Mobility, Late Game, Single Target, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Irithel",
+    "Roles": "Marksman",
+    "Attributes": "Burst, Damage, Early Game, High Mobility, Late Game, Single Target, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Gold Lane"
   },
   {
-    "Hero Name":"Hylos",
-    "Roles":"Exp Lane, Roamer, Tank",
-    "Attributes":"AoE, CC, Early Game, Initiator, Late Game, Semi-Healer, Sustain, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Hylos",
+    "Roles": "Tank",
+    "Attributes": "AoE, CC, Early Game, Initiator, Late Game, Semi-Healer, Sustain, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Exp Lane, Roamer"
   },
   {
-    "Hero Name":"Odette",
-    "Roles":"Mage, Mid Lane",
-    "Attributes":"AoE, Burst, CC, Counter-Initiate, Damage, Early Game, Initiator, Late Game, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Odette",
+    "Roles": "Mage",
+    "Attributes": "AoE, Burst, CC, Counter-Initiate, Damage, Early Game, Initiator, Late Game, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Mid Lane"
   },
   {
-    "Hero Name":"Diggie",
-    "Roles":"Roamer, Support",
-    "Attributes":"Anti-CC, AoE, CC, Counter-Initiate, Early Game, Late Game, Semi-Healer, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Diggie",
+    "Roles": "Support",
+    "Attributes": "Anti-CC, AoE, CC, Counter-Initiate, Early Game, Late Game, Semi-Healer, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Roamer"
   },
   {
-    "Hero Name":"Harley",
-    "Roles":"Assassin, Gold Lane, Jungler, Mage, Mid Lane",
-    "Attributes":"Anti-Tank, Burst, Damage, Early Game, High Mobility, Late Game, Single Target, Split Push, Team Fight, Backline",
-    "Damage Type":"Magic"
+    "Hero Name": "Harley",
+    "Roles": "Assassin, Mage",
+    "Attributes": "Anti-Tank, Burst, Damage, Early Game, High Mobility, Late Game, Single Target, Split Push, Team Fight, Backline",
+    "Damage Type": "Magic",
+    "Lanes": "Gold Lane, Jungler, Mid Lane"
   },
   {
-    "Hero Name":"Argus",
-    "Roles":"Exp Lane, Fighter, Gold Lane",
-    "Attributes":"Anti-Tank, Burst, Damage-Sustain, High Mobility, Late Game, Single Target, Split Push, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Argus",
+    "Roles": "Fighter",
+    "Attributes": "Anti-Tank, Burst, Damage-Sustain, High Mobility, Late Game, Single Target, Split Push, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Gold Lane"
   },
   {
-    "Hero Name":"Grock",
-    "Roles":"Exp Lane, Fighter, Roamer, Tank",
-    "Attributes":"Anti-CC, AoE, Burst, CC, Damage, Early Game, Initiator, Late Game, Sustain, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Grock",
+    "Roles": "Fighter, Tank",
+    "Attributes": "Anti-CC, AoE, Burst, CC, Damage, Early Game, Initiator, Late Game, Sustain, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Roamer"
   },
   {
-    "Hero Name":"Zhask",
-    "Roles":"Mage, Mid Lane",
-    "Attributes":"CC, Damage, Early Game, Late Game, Poke, Single Target, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Zhask",
+    "Roles": "Mage",
+    "Attributes": "CC, Damage, Early Game, Late Game, Poke, Single Target, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Mid Lane"
   },
   {
-    "Hero Name":"Lancelot",
-    "Roles":"Assassin, Jungler",
-    "Attributes":"Anti-CC, AoE, Burst, Backline, Damage, Early Game, High Mobility, Late Game, Split Push, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Lancelot",
+    "Roles": "Assassin",
+    "Attributes": "Anti-CC, AoE, Burst, Backline, Damage, Early Game, High Mobility, Late Game, Split Push, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Jungler"
   },
   {
-    "Hero Name":"Chang'e",
-    "Roles":"Gold Lane, Mage, Mid Lane",
-    "Attributes":"Damage, Early Game, High Ground, Late Game, Poke, Single Target, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Chang'e",
+    "Roles": "Mage",
+    "Attributes": "Damage, Early Game, High Ground, Late Game, Poke, Single Target, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Gold Lane, Mid Lane"
   },
   {
-    "Hero Name":"Hanabi",
-    "Roles":"Gold Lane, Marksman",
-    "Attributes":"Anti-CC, Anti-Tank, CC, Damage, High Ground, Late Game, Poke, Single Target, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Hanabi",
+    "Roles": "Marksman",
+    "Attributes": "Anti-CC, Anti-Tank, CC, Damage, High Ground, Late Game, Poke, Single Target, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Gold Lane"
   },
   {
-    "Hero Name":"Gusion",
-    "Roles":"Assassin, Jungler, Mid Lane",
-    "Attributes":"Burst, Damage, Early Game, High Mobility, Late Game, Single Target, Team Fight, Backline",
-    "Damage Type":"Magic"
+    "Hero Name": "Gusion",
+    "Roles": "Assassin",
+    "Attributes": "Burst, Damage, Early Game, High Mobility, Late Game, Single Target, Team Fight, Backline",
+    "Damage Type": "Magic",
+    "Lanes": "Jungler, Mid Lane"
   },
   {
-    "Hero Name":"Uranus",
-    "Roles":"Exp Lane, Jungler, Tank",
-    "Attributes":"AoE, Early Game, Late Game, Poke, Sustain, Team Fight, Backline",
-    "Damage Type":"Magic"
+    "Hero Name": "Uranus",
+    "Roles": "Tank",
+    "Attributes": "AoE, Early Game, Late Game, Poke, Sustain, Team Fight, Backline",
+    "Damage Type": "Magic",
+    "Lanes": "Exp Lane, Jungler"
   },
   {
-    "Hero Name":"Martis",
-    "Roles":"Exp Lane, Fighter, Jungler",
-    "Attributes":"Anti-CC, Burst, CC, Damage-Sustain, Early Game, Single Target, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Martis",
+    "Roles": "Fighter",
+    "Attributes": "Anti-CC, Burst, CC, Damage-Sustain, Early Game, Single Target, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Jungler"
   },
   {
-    "Hero Name":"Angela",
-    "Roles":"Support, Roamer",
-    "Attributes":"Early Game, Healer, Late Game, Poke, Single Target, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Angela",
+    "Roles": "Support",
+    "Attributes": "Early Game, Healer, Late Game, Poke, Single Target, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Roamer"
   },
   {
-    "Hero Name":"Valir",
-    "Roles":"Mage, Mid Lane",
-    "Attributes":"Anti-CC, Anti-Tank, AoE, CC, Damage-Sustain, Early Game, Late Game, Poke, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Valir",
+    "Roles": "Mage",
+    "Attributes": "Anti-CC, Anti-Tank, AoE, CC, Damage-Sustain, Early Game, Late Game, Poke, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Mid Lane"
   },
   {
-    "Hero Name":"Jawhead",
-    "Roles":"Exp Lane, Fighter, Jungler, Roamer",
-    "Attributes":"CC, Damage, Early Game, High Mobility, Initiator, Late Game, Poke, Single Target, Sustain, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Jawhead",
+    "Roles": "Fighter",
+    "Attributes": "CC, Damage, Early Game, High Mobility, Initiator, Late Game, Poke, Single Target, Sustain, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Jungler, Roamer"
   },
   {
-    "Hero Name":"Lesley",
-    "Roles":"Gold Lane, Marksman",
-    "Attributes":"Burst, Damage, Early Game, Late Game, Single Target, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Lesley",
+    "Roles": "Marksman",
+    "Attributes": "Burst, Damage, Early Game, Late Game, Single Target, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Gold Lane"
   },
   {
-    "Hero Name":"Gatotkaca",
-    "Roles":"Exp Lane, Fighter, Roamer, Tank",
-    "Attributes":"AoE, CC, Early Game, High Ground, Initiator, Late Game, Poke, Sustain, Team Fight, Backline",
-    "Damage Type":"Magic"
+    "Hero Name": "Gatotkaca",
+    "Roles": "Fighter, Tank",
+    "Attributes": "AoE, CC, Early Game, High Ground, Initiator, Late Game, Poke, Sustain, Team Fight, Backline",
+    "Damage Type": "Magic",
+    "Lanes": "Exp Lane, Roamer"
   },
   {
-    "Hero Name":"Karrie",
-    "Roles":"Gold Lane, Marksman",
-    "Attributes":"Anti-Tank, Burst, Damage, Early Game, High Mobility, Late Game, Single Target, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Karrie",
+    "Roles": "Marksman",
+    "Attributes": "Anti-Tank, Burst, Damage, Early Game, High Mobility, Late Game, Single Target, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Gold Lane"
   },
   {
-    "Hero Name":"Roger",
-    "Roles":"Marksman, Fighter, Gold Lane, Jungler",
-    "Attributes":"Anti-Tank, Burst, Damage, Early Game, High Mobility, Late Game, Single Target, Split Push, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Roger",
+    "Roles": "Marksman, Fighter",
+    "Attributes": "Anti-Tank, Burst, Damage, Early Game, High Mobility, Late Game, Single Target, Split Push, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Gold Lane, Jungler"
   },
   {
-    "Hero Name":"Cyclops",
-    "Roles":"Mage, Mid Lane",
-    "Attributes":"CC, Damage-Sustain, Early Game, Late Game, Poke, Single Target, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Cyclops",
+    "Roles": "Mage",
+    "Attributes": "CC, Damage-Sustain, Early Game, Late Game, Poke, Single Target, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Mid Lane"
   },
   {
-    "Hero Name":"Hilda",
-    "Roles":"Exp Lane, Roamer, Tank",
-    "Attributes":"Anti-Tank, Burst, Early Game, High Mobility, Late Game, Single Target, Sustain, Team Fight, Backline",
-    "Damage Type":"Physical"
+    "Hero Name": "Hilda",
+    "Roles": "Tank",
+    "Attributes": "Anti-Tank, Burst, Early Game, High Mobility, Late Game, Single Target, Sustain, Team Fight, Backline",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Roamer"
   },
   {
-    "Hero Name":"Aurora",
-    "Roles":"Mage, Mid Lane",
-    "Attributes":"AoE, Burst, CC, Damage, Early Game, High Ground, Initiator, Late Game, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Aurora",
+    "Roles": "Mage",
+    "Attributes": "AoE, Burst, CC, Damage, Early Game, High Ground, Initiator, Late Game, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Mid Lane"
   },
   {
-    "Hero Name":"Vexana",
-    "Roles":"Mage, Mid Lane",
-    "Attributes":"AoE, Burst, CC, Damage, Early Game, High Ground, Initiator, Late Game, Poke, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Vexana",
+    "Roles": "Mage",
+    "Attributes": "AoE, Burst, CC, Damage, Early Game, High Ground, Initiator, Late Game, Poke, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Mid Lane"
   },
   {
-    "Hero Name":"Lapu-Lapu",
-    "Roles":"Exp Lane, Fighter, Gold Lane",
-    "Attributes":"Anti-CC, AoE, Backline, Burst, CC, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Lapu-Lapu",
+    "Roles": "Fighter",
+    "Attributes": "Anti-CC, AoE, Backline, Burst, CC, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Gold Lane"
   },
   {
-    "Hero Name":"Estes",
-    "Roles":"Roamer, Support",
-    "Attributes":"AoE, Early Game, Healer, Late Game, Sustain, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Estes",
+    "Roles": "Support",
+    "Attributes": "AoE, Early Game, Healer, Late Game, Sustain, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Roamer"
   },
   {
-    "Hero Name":"Johnson",
-    "Roles":"Jungler, Roamer, Tank",
-    "Attributes":"AoE, CC, Early Game, High Mobility, Initiator, Late Game, Sustain, Team Fight, Backline, Split Push",
-    "Damage Type":"Magic"
+    "Hero Name": "Johnson",
+    "Roles": "Tank",
+    "Attributes": "AoE, CC, Early Game, High Mobility, Initiator, Late Game, Sustain, Team Fight, Backline, Split Push",
+    "Damage Type": "Magic",
+    "Lanes": "Jungler, Roamer"
   },
   {
-    "Hero Name":"Ruby",
-    "Roles":"Exp Lane, Fighter, Gold Lane, Roamer",
-    "Attributes":"AoE, CC, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Ruby",
+    "Roles": "Fighter",
+    "Attributes": "AoE, CC, Damage-Sustain, Early Game, Initiator, Late Game, Poke, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Gold Lane, Roamer"
   },
   {
-    "Hero Name":"Gord",
-    "Roles":"Mage, Mid Lane",
-    "Attributes":"AoE, CC, Damage, Early Game, High Ground, Late Game, Poke, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Gord",
+    "Roles": "Mage",
+    "Attributes": "AoE, CC, Damage, Early Game, High Ground, Late Game, Poke, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Mid Lane"
   },
   {
-    "Hero Name":"Alpha",
-    "Roles":"Exp Lane, Fighter, Jungler",
-    "Attributes":"Anti-Tank, AoE, CC, Damage-Sustain, Early Game, Late Game, Poke, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Alpha",
+    "Roles": "Fighter",
+    "Attributes": "Anti-Tank, AoE, CC, Damage-Sustain, Early Game, Late Game, Poke, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Jungler"
   },
   {
-    "Hero Name":"Freya",
-    "Roles":"Exp Lane, Fighter, Gold Lane, Jungler",
-    "Attributes":"AoE, Burst, CC, Damage-Sustain, Early Game, High Mobility, Initiator, Late Game, Poke, Team Fight, Backline",
-    "Damage Type":"Physical"
+    "Hero Name": "Freya",
+    "Roles": "Fighter",
+    "Attributes": "AoE, Burst, CC, Damage-Sustain, Early Game, High Mobility, Initiator, Late Game, Poke, Team Fight, Backline",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Gold Lane, Jungler"
   },
   {
-    "Hero Name":"Yi Sun-shin",
-    "Roles":"Assassin, Jungler",
-    "Attributes":"Anti-CC, AoE, Burst, CC, Damage, Early Game, High Mobility, Late Game, Poke, Single Target, Split Push, Team Fight, Open Map",
-    "Damage Type":"Physical"
+    "Hero Name": "Yi Sun-shin",
+    "Roles": "Assassin",
+    "Attributes": "Anti-CC, AoE, Burst, CC, Damage, Early Game, High Mobility, Late Game, Poke, Single Target, Split Push, Team Fight, Open Map",
+    "Damage Type": "Physical",
+    "Lanes": "Jungler"
   },
   {
-    "Hero Name":"Chou",
-    "Roles":"Exp Lane, Fighter, Gold Lane, Roamer",
-    "Attributes":"Anti-CC, CC, Damage, Burst, Early Game, High Mobility, Initiator, Late Game, Pick Off, Poke, Single Target, Split Push, Sustain, Team Fight, Backline",
-    "Damage Type":"Physical"
+    "Hero Name": "Chou",
+    "Roles": "Fighter",
+    "Attributes": "Anti-CC, CC, Damage, Burst, Early Game, High Mobility, Initiator, Late Game, Pick Off, Poke, Single Target, Split Push, Sustain, Team Fight, Backline",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Gold Lane, Roamer"
   },
   {
-    "Hero Name":"Kagura",
-    "Roles":"Mage, Mid Lane",
-    "Attributes":"Anti-CC, AoE, Burst, CC, Damage, Early Game, High Mobility, Late Game, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Kagura",
+    "Roles": "Mage",
+    "Attributes": "Anti-CC, AoE, Burst, CC, Damage, Early Game, High Mobility, Late Game, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Mid Lane"
   },
   {
-    "Hero Name":"Moskov",
-    "Roles":"Gold Lane, Marksman",
-    "Attributes":"Anti-Tank, CC, Damage, High Mobility, Late Game, Poke, Single Target, Split Push, Team Fight, Backline",
-    "Damage Type":"Physical"
+    "Hero Name": "Moskov",
+    "Roles": "Marksman",
+    "Attributes": "Anti-Tank, CC, Damage, High Mobility, Late Game, Poke, Single Target, Split Push, Team Fight, Backline",
+    "Damage Type": "Physical",
+    "Lanes": "Gold Lane"
   },
   {
-    "Hero Name":"Sun",
-    "Roles":"Exp Lane, Fighter, Gold Lane, Jungler",
-    "Attributes":"Anti-CC, Anti-Tank, Damage, High Mobility, Late Game, Poke, Single Target, Split Push, Backline",
-    "Damage Type":"Physical"
+    "Hero Name": "Sun",
+    "Roles": "Fighter",
+    "Attributes": "Anti-CC, Anti-Tank, Damage, High Mobility, Late Game, Poke, Single Target, Split Push, Backline",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Gold Lane, Jungler"
   },
   {
-    "Hero Name":"Natalia",
-    "Roles":"Assassin, Jungler, Roamer",
-    "Attributes":"Burst, CC, Damage, Early Game, High Mobility, Late Game, Single Target, Split Push, Backline",
-    "Damage Type":"Physical"
+    "Hero Name": "Natalia",
+    "Roles": "Assassin",
+    "Attributes": "Burst, CC, Damage, Early Game, High Mobility, Late Game, Single Target, Split Push, Backline",
+    "Damage Type": "Physical",
+    "Lanes": "Jungler, Roamer"
   },
   {
-    "Hero Name":"Hayabusa",
-    "Roles":"Assassin, Jungler",
-    "Attributes":"Anti-CC, AoE, Backline, Burst, Damage, Early Game, High Mobility, Late Game, Split Push, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Hayabusa",
+    "Roles": "Assassin",
+    "Attributes": "Anti-CC, AoE, Backline, Burst, Damage, Early Game, High Mobility, Late Game, Split Push, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Jungler"
   },
   {
-    "Hero Name":"Miya",
-    "Roles":"Gold Lane, Marksman",
-    "Attributes":"Anti-CC, Burst, Damage, Late Game, Split Push, High Ground, Team Fight, Backline",
-    "Damage Type":"Physical"
+    "Hero Name": "Miya",
+    "Roles": "Marksman",
+    "Attributes": "Anti-CC, Burst, Damage, Late Game, Split Push, High Ground, Team Fight, Backline",
+    "Damage Type": "Physical",
+    "Lanes": "Gold Lane"
   },
   {
-    "Hero Name":"Eudora",
-    "Roles":"Mage, Mid Lane",
-    "Attributes":"Burst, CC, Damage, Single Target, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Eudora",
+    "Roles": "Mage",
+    "Attributes": "Burst, CC, Damage, Single Target, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Mid Lane"
   },
   {
-    "Hero Name":"Clint",
-    "Roles":"Gold Lane, Marksman",
-    "Attributes":"Burst, Damage, Early Game, Late Game, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Clint",
+    "Roles": "Marksman",
+    "Attributes": "Burst, Damage, Early Game, Late Game, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Gold Lane"
   },
   {
-    "Hero Name":"Lolita",
-    "Roles":"Roamer, Support, Tank",
-    "Attributes":"CC, Early Game, Initiator, Late Game, Semi-Healer, Sustain, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Lolita",
+    "Roles": "Support, Tank",
+    "Attributes": "CC, Early Game, Initiator, Late Game, Semi-Healer, Sustain, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Roamer"
   },
   {
-    "Hero Name":"Minotaur",
-    "Roles":"Roamer, Support, Tank",
-    "Attributes":"CC, Counter-Initiate, Early Game, Healer, Initiator, Late Game, Sustain, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Minotaur",
+    "Roles": "Support, Tank",
+    "Attributes": "CC, Counter-Initiate, Early Game, Healer, Initiator, Late Game, Sustain, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Roamer"
   },
   {
-    "Hero Name":"Bruno",
-    "Roles":"Gold Lane, Marksman",
-    "Attributes":"Burst, Damage, Late Game, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Bruno",
+    "Roles": "Marksman",
+    "Attributes": "Burst, Damage, Late Game, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Gold Lane"
   },
   {
-    "Hero Name":"Rafaela",
-    "Roles":"Roamer, Support",
-    "Attributes":"CC, Early Game, Healer, Late Game, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Rafaela",
+    "Roles": "Support",
+    "Attributes": "CC, Early Game, Healer, Late Game, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Roamer"
   },
   {
-    "Hero Name":"Layla",
-    "Roles":"Gold Lane, Marksman",
-    "Attributes":"Burst, Damage, Late Game, Single Target, Team Fight, High Ground",
-    "Damage Type":"Physical"
+    "Hero Name": "Layla",
+    "Roles": "Marksman",
+    "Attributes": "Burst, Damage, Late Game, Single Target, Team Fight, High Ground",
+    "Damage Type": "Physical",
+    "Lanes": "Gold Lane"
   },
   {
-    "Hero Name":"Zilong",
-    "Roles":"Assassin, Exp Lane, Fighter, Gold Lane, Jungler",
-    "Attributes":"Burst, Damage, High Mobility, Late Game, Single Target, Split Push",
-    "Damage Type":"Physical"
+    "Hero Name": "Zilong",
+    "Roles": "Assassin, Fighter",
+    "Attributes": "Burst, Damage, High Mobility, Late Game, Single Target, Split Push",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Gold Lane, Jungler"
   },
   {
-    "Hero Name":"Akai",
-    "Roles":"Exp Lane, Jungler, Roamer, Tank",
-    "Attributes":"Anti-CC, CC, Counter-Initiate, Early Game, Initiator, Late Game, Sustain, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Akai",
+    "Roles": "Tank",
+    "Attributes": "Anti-CC, CC, Counter-Initiate, Early Game, Initiator, Late Game, Sustain, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Jungler, Roamer"
   },
   {
-    "Hero Name":"Alice",
-    "Roles":"Exp Lane, Jungler, Tank, Mage",
-    "Attributes":"AoE, CC, Early Game, Late Game, Sustain, Team Fight, Backline",
-    "Damage Type":"Magic"
+    "Hero Name": "Alice",
+    "Roles": "Tank, Mage",
+    "Attributes": "AoE, CC, Early Game, Late Game, Sustain, Team Fight, Backline",
+    "Damage Type": "Magic",
+    "Lanes": "Exp Lane, Jungler"
   },
   {
-    "Hero Name":"Franco",
-    "Roles":"Roamer, Tank",
-    "Attributes":"CC, Early Game, Initiator, Late Game, Pick Off, Single Target, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Franco",
+    "Roles": "Tank",
+    "Attributes": "CC, Early Game, Initiator, Late Game, Pick Off, Single Target, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Roamer"
   },
   {
-    "Hero Name":"Karina",
-    "Roles":"Assassin, Jungler",
-    "Attributes":"Burst, Damage, Early Game, High Mobility, Late Game, Single Target, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Karina",
+    "Roles": "Assassin",
+    "Attributes": "Burst, Damage, Early Game, High Mobility, Late Game, Single Target, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Jungler"
   },
   {
-    "Hero Name":"Nana",
-    "Roles":"Mage, Mid Lane",
-    "Attributes":"AoE, CC, Damage, Early Game, Late Game, Team Fight",
-    "Damage Type":"Magic"
+    "Hero Name": "Nana",
+    "Roles": "Mage",
+    "Attributes": "AoE, CC, Damage, Early Game, Late Game, Team Fight",
+    "Damage Type": "Magic",
+    "Lanes": "Mid Lane"
   },
   {
-    "Hero Name":"Balmond",
-    "Roles":"Exp Lane, Fighter, Jungler, Tank",
-    "Attributes":"Burst, Damage-Sustain, Early Game, Late Game, Poke, Team Fight",
-    "Damage Type":"Physical"
+    "Hero Name": "Balmond",
+    "Roles": "Fighter, Tank",
+    "Attributes": "Burst, Damage-Sustain, Early Game, Late Game, Poke, Team Fight",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Jungler"
   },
   {
-    "Hero Name":"Saber",
-    "Roles":"Assassin, Jungler, Roamer",
-    "Attributes":"Burst, Damage, Early Game, Late Game, Single Target, Split Push",
-    "Damage Type":"Physical"
+    "Hero Name": "Saber",
+    "Roles": "Assassin",
+    "Attributes": "Burst, Damage, Early Game, Late Game, Single Target, Split Push",
+    "Damage Type": "Physical",
+    "Lanes": "Jungler, Roamer"
   },
   {
-    "Hero Name":"Bane",
-    "Roles":"Exp Lane, Fighter, Gold Lane, Jungler",
-    "Attributes":"Anti-Tank, Burst, CC, Damage, Early Game, Late Game, Split Push, Team Fight",
-    "Damage Type":"Mixed"
+    "Hero Name": "Bane",
+    "Roles": "Fighter",
+    "Attributes": "Anti-Tank, Burst, CC, Damage, Early Game, Late Game, Split Push, Team Fight",
+    "Damage Type": "Mixed",
+    "Lanes": "Exp Lane, Gold Lane, Jungler"
   },
   {
-    "Hero Name":"Alucard",
-    "Roles":"Assassin, Exp Lane, Fighter, Jungler",
-    "Attributes":"Burst, Damage, Damage-Sustain, Early Game, High Mobility, Late Game, Team Fight, Backline",
-    "Damage Type":"Physical"
+    "Hero Name": "Alucard",
+    "Roles": "Assassin, Fighter",
+    "Attributes": "Burst, Damage, Damage-Sustain, Early Game, High Mobility, Late Game, Team Fight, Backline",
+    "Damage Type": "Physical",
+    "Lanes": "Exp Lane, Jungler"
   }
 ]
