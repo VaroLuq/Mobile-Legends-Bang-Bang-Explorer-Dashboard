@@ -191,7 +191,7 @@
   {
     "Hero Name": "Valentina",
     "Roles": "Mage",
-    "Attributes": "AoE, Burst, CC, Counter-Initiate, Damage, Damage-Sustain, Early Game, High Mobility, Initiator, Late Game, Poke, Team Fight",
+    "Attributes": "AoE, Burst, CC, Damage, Damage-Sustain, Early Game, High Mobility, Initiator, Late Game, Poke, Team Fight",
     "Damage Type": "Magic",
     "Lanes": "Exp Lane, Mid Lane"
   },
@@ -296,7 +296,7 @@
   {
     "Hero Name": "Terizla",
     "Roles": "Fighter, Tank",
-    "Attributes": "AoE, Burst, CC, Counter-Initiate, Damage-Sustain, Early Game, Initiator, Late Game, Sustain, Team Fight",
+    "Attributes": "AoE, Burst, CC, Damage-Sustain, Early Game, Initiator, Late Game, Sustain, Team Fight",
     "Damage Type": "Physical",
     "Lanes": "Exp Lane, Roamer"
   },
